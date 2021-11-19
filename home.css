@@ -2,7 +2,9 @@
   box-sizing: border-box;
 }
 
+
 @import url(https://fonts.google.com/specimen/Mada);
+
 
 /* Start responsive nav for medium devices using Claire's codepen, then adjusted (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
@@ -118,10 +120,10 @@ input[type="reset"]:hover {
 }
 
 input[type="submit"] {
-  background-color: #191645;
+  background-color: #686f48;
   color: white;
   padding: 12px 20px;
-  border: 1px solid #191645;
+  border: 1px solid #686f48;
   border-radius: 4px;
   cursor: pointer;
 }
@@ -205,4 +207,3 @@ fieldset {
   font-size: 0.8rem;
   color: red;
 }
-
