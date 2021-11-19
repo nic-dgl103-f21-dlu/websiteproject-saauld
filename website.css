@@ -1,0 +1,208 @@
+* {
+  box-sizing: border-box;
+}
+
+@import url(https://fonts.google.com/specimen/Mada);
+
+/* Start responsive nav for medium devices using Claire's codepen, then adjusted (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .wrapper {
+    display: flex;
+  }
+  nav {
+    flex-grow: 1;
+    margin-right: 10px;
+  }
+  section {
+    flex-grow: 3;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .wrapper {
+   max-width: 1200px;
+   margin: 0 auto; 
+  }
+
+}
+
+/* End responsive nav. Start table styling, borrowed from Claire's code pen then adjusted*/
+
+table {
+font-family: Arial, Helvetica, sans-serif;
+width: 100%;
+border-collapse: collapse;
+}
+
+caption {
+font-size: 1.5em;
+font-weight:bold;
+text-align: left;
+padding: 10px 0;
+}
+
+td,th {
+border: 2px solid #f2f2f2;
+padding: 8px;
+}
+
+th {
+padding-top: 8px;
+padding-bottom: 8px;
+text-align: left;
+background-color: #e4ae5d;
+color: white;
+font-size: 16px;
+}
+
+tr:nth-child(even) {
+background-color: #f2f2f2;
+}
+
+tbody tr:hover {
+background-color: #ddd;
+}
+
+td.merge {
+text-align: center;
+font-style: italic;
+}
+
+tfoot {
+font-size: 0.8em;
+font-style: italic;
+text-align: center;
+background-color: #cc8e8e;
+}
+
+/* End table styling. Start Contact Form */
+
+/* STYLES ----------------------------------
+1. Global settings (resets such as border-box)
+2. Typography (headings, paragraphs, lists, buttons)
+3. Layout structure (body, header, footer, sidebar)
+4. Content blocks (cards, tables, forms, calls-to-action block)
+5. General classes (.clear, .center, .right, .left, .big-margin, etc.)
+6. Page-specific (styles specific to individual locations)
+-----------------------------------------------------*/
+
+/* ===============
+ GLOBAL SETTINGS
+ =============== */
+
+ * {
+  box-sizing: border-box;
+}
+
+/* ===============
+   TYPOGRAPHY
+   =============== */
+
+body {
+  font-family: sans-serif;
+}
+
+/* ===============
+   BUTTONS
+   =============== */
+
+input[type="reset"] {
+  color: #191645;
+  padding: 12px 20px;
+  border: 1px solid #191645;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="reset"]:hover {
+  background-color: #d1efe3;
+}
+
+input[type="submit"] {
+  background-color: #191645;
+  color: white;
+  padding: 12px 20px;
+  border: 1px solid #191645;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #00ab66;
+}
+
+/* ===============
+   STRUCTURE
+   =============== */
+
+.wrapper-form {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.wrapper-button {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* ===============
+   FORM CONTROLS
+   =============== */
+
+input,
+select,
+textarea {
+  font-size: 1em;
+}
+
+/* stream and message boxes */
+input[type="text"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid rgb(204, 204, 204);
+  border-radius: 4px;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+/* email box */ 
+input[type="email"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+/* phone style box */
+input[type="tel"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+textarea {
+  font-family: sans-serif;
+}
+
+fieldset {
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+}
+
+.label-required {
+  font-size: 0.8rem;
+  color: red;
+}
+
