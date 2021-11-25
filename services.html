@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- DGL 103 DLU1 - Shayla Auld - Integrated Operations Group Website -->
+    <title>Shayla's Assignment 4</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="services.css">
+    <link rel="icon" href="images/icon.png" type="images/icon.png"> <!--IOG Icon appears in tab-->
+    <style>
+    
+    @import url('https://fonts.googleapis.com/css2?family=Mada:wght@300&display=swap'); /* mada font imported */
+    body { 
+        font-size: 100%; 
+        font-family:'Mada', sans-serif; 
+        color:rgb(0, 0, 0);
+        margin: 0;
+    }
+    
+    header {
+      padding: 15px;
+      width: 1000px; /* centers the content and gives it negative space on either side */
+      margin: auto;
+      display: flex; /* the flex-container for the logo and the heading (the flex-items) makes the flex-items sit side by side */
+      align-items: center; /* positions the flex items at the center of the cross axis (vertical) */
+    }
+
+    h1 {
+      margin-left: 20px; /* Adds a little space between the logo and the heading */
+      font-size: 35px; /* font sizes added for headers */
+    }
+
+    h2 {
+        font-size: 25px;
+    }
+
+    footer {
+        background-color: rgba(35, 34, 30, 0.2)
+    }
+
+       /* _____START NAV______ */
+
+  nav {
+      background-color: rgb(255, 255, 255); /*nav colour added */
+      margin: auto;
+      height: auto;
+    }
+
+  nav .wrapper {
+    width: 1000px;
+    margin: auto;
+    padding: 0 500px ;
+  }
+  
+  nav ul {
+    display: flex; /* the flex-container for the list items makes the flex-items sit side by side */
+    justify-content: space-between; /* spreads the flex-items starting at the start and end of the main axis */
+    list-style-type: none; /* removes the list bullets */
+    margin: 0;
+    padding: 0;
+  }
+
+  nav li a:hover { 
+    background-color: #686f48;
+    color: rgb(255, 255, 255)
+  }
+  
+  nav li a { 
+    padding: 15px;
+    display: inline-block; /* an anchor is an inline element so it has no box model vertical measurements, this makes the anchor behave like a block element that sits inline like an inline element */
+    text-decoration: none;
+    font-weight: bold;
+    color: #191645;
+  }
+
+  * {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+  @media screen and (min-width: 600px) {
+  .wrapper {
+    display: flex;
+    max-width: 1200px;
+   margin: 0 auto; 
+  }
+  nav {
+    flex-grow: 1;
+    margin-right: 10px;
+  }
+  section {
+    flex-grow: 3;
+  }
+/*end NAV */
+
+}
+    </style>
+</head>
+
+<body>
+    <header> 
+      <a href="home.html"><img src="images/logo.jpg" ALT="Integrated Operations Group Logo" width="200"></a>
+    <nav>
+      <div class="wrapper"> <!-- Wraps the content so that the background colour can spread from edge to edge of the browser window -->
+
+          <ul> <!-- Using a list for navigation items is the correct semantic way to format them -->
+            <li><a  href="home.html">Home</a></li>
+            <li><a  href="about.html">About</a></li>
+            <li><a  href="services.html">Services</a></li>
+            <li><a  href="contact.html">Contact</a></li>
+            <a href="https://www.facebook.com/integratedops" target="blank" title="Integrated Operations Group Facebook"> <img src="images/facebookicon.png" center width="30" alt="Integrated Operations Group Facebook"></a> <!--Facebook icon-->
+            <a href="https://www.instagram.com/integrated_ops/" target="blank" title="Integrated Operations Group Instagram"> <img src="images/instaicon.png" center width="30" alt="Integrated Operations Group Instagram"></a> <!--Instagram Link-->
+          </ul>
+      </div>
+          </header>
+
+<!-- Header Photo-->
+    <section>
+        <img src="images/iogphoto4.jpeg" style="width:100%"></a>
+      </section>
+
+    <main>
+        <h2>Header 2</h2>
+    <p> <b> Below we'll be critiquing the <a href="https://ascentphysiotherapy.com/news.html" style="color: rgb(0, 0, 0);">Ascent Physiotherapy Website. </a> </b></p>
+        
+        <h3> Header 3</h3>
+        Text goes here.
+        
+        <figure> <img src="images/1.png" alt="Figure 1. Landing page and navigation bar for Ascent Physiotherapy" width="500">
+        <figcaption><b> Figure 1. Caption. </b></figcaption></figure>  <!-- main page photo with figure caption-->
+
+        <h3>Header 3</h3>
+        </p> Paragraph goes here. </p>
+        
+        <figure>
+        <img src="images/2.png"
+        alt="Figure 2. Stand alone landing page block."
+        width="500">
+        <figcaption><b> Figure 2. Caption goes here. </b></figcaption></figure>
+
+        <h3>Header 3.1</h3>
+    <p> Paragraph goes here.</p>
+        
+        <figure>
+        <img src="images/4.png"
+        alt="Figure 3. Stand alone landing page block."
+        width="500">
+        <figcaption><b> Figure 3. Caption goes here. </b></figcaption></figure>
+    
+     <h3>Conclusion</h3> 
+     <p class="conclusion"> Paragraph goes here. </p>
+
+</main>
+</body>
+</html>

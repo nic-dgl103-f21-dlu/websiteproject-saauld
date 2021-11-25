@@ -2,14 +2,12 @@
   box-sizing: border-box;
 }
 
-
-@import url(https://fonts.google.com/specimen/Mada);
-
-
 /* Start responsive nav for medium devices using Claire's codepen, then adjusted (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
+@media screen and (min-width: 600px) {
   .wrapper {
     display: flex;
+    max-width: 1200px;
+   margin: 0 auto; 
   }
   nav {
     flex-grow: 1;
@@ -17,12 +15,6 @@
   }
   section {
     flex-grow: 3;
-  }
-}
-@media only screen and (min-width: 1200px) {
-  .wrapper {
-   max-width: 1200px;
-   margin: 0 auto; 
   }
 
 }
