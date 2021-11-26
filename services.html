@@ -3,7 +3,7 @@
 
 <head>
     <!-- DGL 103 DLU1 - Shayla Auld - Integrated Operations Group Website -->
-    <title>Shayla's Assignment 4</title>
+    <title>Integrated Operations Group</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="services.css">
     <link rel="icon" href="images/icon.png" type="images/icon.png"> <!--IOG Icon appears in tab-->
@@ -41,22 +41,25 @@
        /* _____START NAV______ */
 
   nav {
-      background-color: rgb(255, 255, 255); /*nav colour added */
+      background-color: rgb(255, 255, 255,0.5); /*nav colour added */
       margin: auto;
       height: auto;
+      padding: 0 300px;
     }
 
-  nav .wrapper {
+  header .wrapper {
     width: 1000px;
     margin: auto;
-    padding: 0 500px ;
+    padding: 0 300px ;
   }
   
   nav ul {
     display: flex; /* the flex-container for the list items makes the flex-items sit side by side */
     justify-content: space-between; /* spreads the flex-items starting at the start and end of the main axis */
     list-style-type: none; /* removes the list bullets */
-    margin: 0;
+    margin: auto;
+    display: flex;
+    align-items: center;
     padding: 0;
   }
 
@@ -66,10 +69,10 @@
   }
   
   nav li a { 
-    padding: 15px;
+    padding: 15px ;
     display: inline-block; /* an anchor is an inline element so it has no box model vertical measurements, this makes the anchor behave like a block element that sits inline like an inline element */
     text-decoration: none;
-    font-weight: bold;
+    font-weight: bold; 
     color: #191645;
   }
 
@@ -78,41 +81,87 @@
 }
 
 body {
-  font-family: sans-serif;
+  font-family:  sans-serif;
+  margin: 0;
 }
 
-  @media screen and (min-width: 600px) {
-  .wrapper {
-    display: flex;
-    max-width: 1200px;
-   margin: 0 auto; 
-  }
-  nav {
-    flex-grow: 1;
-    margin-right: 10px;
-  }
-  section {
-    flex-grow: 3;
-  }
-/*end NAV */
+/*END NAV *//* HEADER START */
 
+.header { /* Nav Bar Box */
+  background-color: rgb(255, 255, 255);
+  box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+}
+
+.header ul { /* NAV Buttons */
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: rgb(255, 255, 255);
+}
+
+.header li a {
+  display: block;
+  padding: 20px 20px;
+  border-right: 1px solid #f4f4f4;
+  text-decoration: none;
+}
+
+.header .logo {
+  display: block;
+  float: left;
+  font-size: 2em;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+.social-icon {
+    padding: 5px;
+}
+
+/* menu */
+
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: .2s ease-out;
+}
+
+@media (min-width: 48em) { /* 48em=768px*/
+  .header li {
+    float: left;
+  }
+  .header li a {
+    padding: 20px 30px;
+  }
+  .header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  .header .menu-icon {
+    display: none;
+  }
 }
     </style>
 </head>
 
 <body>
-    <header> 
-      <a href="home.html"><img src="images/logo.jpg" ALT="Integrated Operations Group Logo" width="200"></a>
-    <nav>
-      <div class="wrapper"> <!-- Wraps the content so that the background colour can spread from edge to edge of the browser window -->
+    <header class="header">
 
-          <ul> <!-- Using a list for navigation items is the correct semantic way to format them -->
+      <a href="home.html" class="logo"><img src="images/logo.jpg" ALT="Integrated Operations Group Logo" width="200"></a>
+      <nav> 
+      <div class="wrapper"> <!-- Wraps the content so that the background colour can spread from edge to edge of the browser window -->
+          <ul class="menu"><!-- Using a list for navigation items is the correct semantic way to format them, REMOVE! -->
             <li><a  href="home.html">Home</a></li>
             <li><a  href="about.html">About</a></li>
             <li><a  href="services.html">Services</a></li>
             <li><a  href="contact.html">Contact</a></li>
-            <a href="https://www.facebook.com/integratedops" target="blank" title="Integrated Operations Group Facebook"> <img src="images/facebookicon.png" center width="30" alt="Integrated Operations Group Facebook"></a> <!--Facebook icon-->
-            <a href="https://www.instagram.com/integrated_ops/" target="blank" title="Integrated Operations Group Instagram"> <img src="images/instaicon.png" center width="30" alt="Integrated Operations Group Instagram"></a> <!--Instagram Link-->
+            <a href="https://www.facebook.com/integratedops" class="social-icon" target="blank" title="Integrated Operations Group Facebook"> <img src="images/facebookicon.png"  width="30" alt="Integrated Operations Group Facebook"></a> <!--Facebook icon-->
+            <a href="https://www.instagram.com/integrated_ops/" class="social-icon" target="blank" title="Integrated Operations Group Instagram"> <img src="images/instaicon.png"  width="27" alt="Integrated Operations Group Instagram"></a> <!--Instagram Link-->
           </ul>
       </div>
           </header>

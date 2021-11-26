@@ -41,7 +41,7 @@
     /* _____START NAV______ */
 
   nav {
-      background-color: rgba(255,255,255,.5); /*nav colour added */
+      background-color: rgba(255, 255, 255, 0.5); /*nav colour added */
       margin: auto;
       height: auto;
     }
@@ -49,14 +49,15 @@
   nav .wrapper {
     width: 1000px;
     margin: auto;
-    padding: 0 500px ;
   }
   nav ul {
     display: flex; /* the flex-container for the list items makes the flex-items sit side by side */
     justify-content: space-between; /* spreads the flex-items starting at the start and end of the main axis */
     list-style-type: none; /* removes the list bullets */
-    margin: 0;
-    padding: 0;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    padding: 0 300px;
   }
 
   nav li a:hover { 
