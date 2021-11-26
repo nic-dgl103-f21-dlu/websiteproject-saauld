@@ -3,9 +3,8 @@
 
 <head>
     <!-- DGL 103 DLU1 - Shayla Auld - Integrated Operations Group Website -->
-    <title>Integrated Operations Group</title>
+    <title>Services</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="services.css">
     <link rel="icon" href="images/icon.png" type="images/icon.png"> <!--IOG Icon appears in tab-->
     <style>
     
@@ -118,8 +117,10 @@ body {
   text-decoration: none;
 }
 
-.social-icon {
+.social-icon { /*Facebook & Twitter NAV Icons */
     padding: 5px;
+    margin-left: 10px;
+    margin-right: 5px;
 }
 
 /* menu */
@@ -145,7 +146,89 @@ body {
   .header .menu-icon {
     display: none;
   }
+
+   /*FOOTER STYLE START*/ 
+
+   footer {
+      bottom: 100px;
+      background: #686f48;
+      width: 100%;
+      padding-top: 40px;
+      color: #fff;
+      background-image: "images/iogphoto1.jpg";
+    }
+
+    footer.content { 
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .footer-content h3{ /*footer IOG title styling */
+        font-size: 2.1rem;
+        font-weight: 1000;
+        line-height: 3rem;
+        text-align: center;
+    }
+
+    .footer-content p{ /*footer disclaimerparagraph text */ 
+        max-width: 500px;
+        margin: 10px auto;
+        line-height: 28px;
+        font-size: 16px;
+        color: #f4f4f4;
+        text-align: center;
+    }
+
+.footer-bottom{ /*Copyright info*/ 
+    background: #505538;
+    width: 100%;
+    padding: 10px;
+    padding-bottom: 10px;
+    text-align: left;
 }
+
+.footer-bottom p{
+   float: left center;
+   font-size: 14px;
+}
+.footer-bottom p a{
+  font-size: 16px;
+}
+.footer-bottom span{ /*Copyright info end*/
+    opacity: .4;
+    font-weight: 200;
+}
+
+.footer-menu{
+  float: right;
+}
+
+.footer-menu ul{
+  display: flex;
+}
+
+.footer-menu ul li{
+padding-right: 10px;
+display: block;
+}
+
+.footer-menu ul li a{ /*right side nav bar*/
+  color: #000000;
+  text-decoration: none;
+  font-family: 'Mada'sans-serif;
+  font-weight: 100px;
+  font-weight: 500;
+  font-size: smaller;
+}
+
+.footer-menu ul li a:hover{
+  color: #686f48;
+}
+
+/* End footer */
+}
+
     </style>
 </head>
 
@@ -203,5 +286,27 @@ body {
      <p class="conclusion"> Paragraph goes here. </p>
 
 </main>
+<!--FOOTER-->
+<footer>
+    <div class="footer-content"> <!-- wraps the content so that the background colour can spread from edge to edge of the browser window -->
+        <h3>Integrated Operations Group</h3>
+        <p><em>This is a fictional website that was designed and coded as an educational exercise. 
+            It is not intended to be seen outside of the class environment. 
+            None of the content and images were approved by the business owner. </em></p></div> 
+            
+    <div class="footer-bottom">
+        <p>Copyright &copy; Shayla Auld 2021</a>  </p>
+    </div>           
+
+    <div class="footer-menu">
+        <ul>
+           <li><a href="home.html">Home</a></li>
+           <li><a href="about.html">About</a></li>
+           <li><a href="services.html">Services</a></li>
+           <li><a href="contact.html">Contact</a></li>
+        </ul>
+       </div>
+
+  </footer>
 </body>
 </html>

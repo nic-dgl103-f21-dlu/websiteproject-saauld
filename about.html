@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- DGL 103 DLU1 - Shayla Auld - Integrated Operations Group Website -->
+    <title>Services</title>
+    <meta charset="utf-8">
+    <link rel="icon" href="images/icon.png" type="images/icon.png"> <!--IOG Icon appears in tab-->
+    <style>
+    
+    @import url('https://fonts.googleapis.com/css2?family=Mada:wght@300&display=swap'); /* mada font imported */
+    body { 
+        font-size: 100%; 
+        font-family:'Mada', sans-serif; 
+        color:rgb(0, 0, 0);
+        margin: 0;
+    }
+    
+    header {
+      padding: 15px;
+      width: 1000px; /* centers the content and gives it negative space on either side */
+      margin: auto;
+      display: flex; /* the flex-container for the logo and the heading (the flex-items) makes the flex-items sit side by side */
+      align-items: center; /* positions the flex items at the center of the cross axis (vertical) */
+    }
+
+    h1 {
+      margin-left: 20px; /* Adds a little space between the logo and the heading */
+      font-size: 35px; /* font sizes added for headers */
+    }
+
+    h2 {
+        font-size: 25px;
+    }
+
+    footer {
+        background-color: rgba(35, 34, 30, 0.2)
+    }
+
+       /* _____START NAV______ */
+
+  nav {
+      background-color: rgb(255, 255, 255,0.5); /*nav colour added */
+      margin: auto;
+      height: auto;
+      padding: 0 300px;
+    }
+
+  header .wrapper {
+    width: 1000px;
+    margin: auto;
+    padding: 0 300px ;
+  }
+  
+  nav ul {
+    display: flex; /* the flex-container for the list items makes the flex-items sit side by side */
+    justify-content: space-between; /* spreads the flex-items starting at the start and end of the main axis */
+    list-style-type: none; /* removes the list bullets */
+    margin: auto;
+    display: flex;
+    align-items: center;
+    padding: 0;
+  }
+
+  nav li a:hover { 
+    background-color: #686f48;
+    color: rgb(255, 255, 255)
+  }
+  
+  nav li a { 
+    padding: 15px ;
+    display: inline-block; /* an anchor is an inline element so it has no box model vertical measurements, this makes the anchor behave like a block element that sits inline like an inline element */
+    text-decoration: none;
+    font-weight: bold; 
+    color: #191645;
+  }
+
+  * {
+  box-sizing: border-box;
+}
+
+body {
+  font-family:  sans-serif;
+  margin: 0;
+}
+
+/*END NAV *//* HEADER START */
+
+.header { /* Nav Bar Box */
+  background-color: rgb(255, 255, 255);
+  box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+}
+
+.header ul { /* NAV Buttons */
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: rgb(255, 255, 255);
+}
+
+.header li a {
+  display: block;
+  padding: 20px 20px;
+  border-right: 1px solid #f4f4f4;
+  text-decoration: none;
+}
+
+.header .logo {
+  display: block;
+  float: left;
+  font-size: 2em;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+.social-icon { /*Facebook & Twitter NAV Icons */
+    padding: 5px;
+    margin-left: 10px;
+    margin-right: 5px;
+}
+
+/* menu */
+
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: .2s ease-out;
+}
+
+@media (min-width: 48em) { /* 48em=768px*/
+  .header li {
+    float: left;
+  }
+  .header li a {
+    padding: 20px 30px;
+  }
+  .header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  .header .menu-icon {
+    display: none;
+  }
+
+   /*FOOTER STYLE START*/ 
+
+   footer {
+      bottom: 100px;
+      background: #686f48;
+      width: 100%;
+      padding-top: 40px;
+      color: #fff;
+      background-image: "images/iogphoto1.jpg";
+    }
+
+    footer.content { 
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .footer-content h3{ /*footer IOG title styling */
+        font-size: 2.1rem;
+        font-weight: 1000;
+        line-height: 3rem;
+        text-align: center;
+    }
+
+    .footer-content p{ /*footer disclaimerparagraph text */ 
+        max-width: 500px;
+        margin: 10px auto;
+        line-height: 28px;
+        font-size: 16px;
+        color: #f4f4f4;
+        text-align: center;
+    }
+
+.footer-bottom{ /*Copyright info*/ 
+    background: #505538;
+    width: 100%;
+    padding: 10px;
+    padding-bottom: 10px;
+    text-align: left;
+}
+
+.footer-bottom p{
+   float: left center;
+   font-size: 14px;
+}
+.footer-bottom p a{
+  font-size: 16px;
+}
+.footer-bottom span{ /*Copyright info end*/
+    opacity: .4;
+    font-weight: 200;
+}
+
+.footer-menu{
+  float: right;
+}
+
+.footer-menu ul{
+  display: flex;
+}
+
+.footer-menu ul li{
+padding-right: 10px;
+display: block;
+}
+
+.footer-menu ul li a{ /*right side nav bar*/
+  color: #000000;
+  text-decoration: none;
+  font-family: 'Mada'sans-serif;
+  font-weight: 100px;
+  font-weight: 500;
+  font-size: smaller;
+}
+
+.footer-menu ul li a:hover{
+  color: #686f48;
+}
+
+/* End footer */
+}
+
+    </style>
+</head>
+
+<body>
+    <header class="header">
+
+      <a href="home.html" class="logo"><img src="images/logo.jpg" ALT="Integrated Operations Group Logo" width="200"></a>
+      <nav> 
+      <div class="wrapper"> <!-- Wraps the content so that the background colour can spread from edge to edge of the browser window -->
+          <ul class="menu"><!-- Using a list for navigation items is the correct semantic way to format them, REMOVE! -->
+            <li><a  href="home.html">Home</a></li>
+            <li><a  href="about.html">About</a></li>
+            <li><a  href="services.html">Services</a></li>
+            <li><a  href="contact.html">Contact</a></li>
+            <a href="https://www.facebook.com/integratedops" class="social-icon" target="blank" title="Integrated Operations Group Facebook"> <img src="images/facebookicon.png"  width="30" alt="Integrated Operations Group Facebook"></a> <!--Facebook icon-->
+            <a href="https://www.instagram.com/integrated_ops/" class="social-icon" target="blank" title="Integrated Operations Group Instagram"> <img src="images/instaicon.png"  width="27" alt="Integrated Operations Group Instagram"></a> <!--Instagram Link-->
+          </ul>
+      </div>
+          </header>
+
+<!-- Header Photo-->
+    <section>
+        <img src="images/iogphoto4.jpeg" style="width:100%"></a>
+      </section>
+
+    <main>
+        <h2>Header 2</h2>
+    <p> <b> Below we'll be critiquing the <a href="https://ascentphysiotherapy.com/news.html" style="color: rgb(0, 0, 0);">Ascent Physiotherapy Website. </a> </b></p>
+        
+        <h3> Header 3</h3>
+        Text goes here.
+        
+        <figure> <img src="images/1.png" alt="Figure 1. Landing page and navigation bar for Ascent Physiotherapy" width="500">
+        <figcaption><b> Figure 1. Caption. </b></figcaption></figure>  <!-- main page photo with figure caption-->
+
+        <h3>Header 3</h3>
+        </p> Paragraph goes here. </p>
+        
+        <figure>
+        <img src="images/2.png"
+        alt="Figure 2. Stand alone landing page block."
+        width="500">
+        <figcaption><b> Figure 2. Caption goes here. </b></figcaption></figure>
+
+        <h3>Header 3.1</h3>
+    <p> Paragraph goes here.</p>
+        
+        <figure>
+        <img src="images/4.png"
+        alt="Figure 3. Stand alone landing page block."
+        width="500">
+        <figcaption><b> Figure 3. Caption goes here. </b></figcaption></figure>
+    
+     <h3>Conclusion</h3> 
+     <p class="conclusion"> Paragraph goes here. </p>
+
+</main>
+<!--FOOTER-->
+<footer>
+    <div class="footer-content"> <!-- wraps the content so that the background colour can spread from edge to edge of the browser window -->
+        <h3>Integrated Operations Group</h3>
+        <p><em>This is a fictional website that was designed and coded as an educational exercise. 
+            It is not intended to be seen outside of the class environment. 
+            None of the content and images were approved by the business owner. </em></p></div> 
+            
+    <div class="footer-bottom">
+        <p>Copyright &copy; Shayla Auld 2021</a>  </p>
+    </div>           
+
+    <div class="footer-menu">
+        <ul>
+           <li><a href="home.html">Home</a></li>
+           <li><a href="about.html">About</a></li>
+           <li><a href="services.html">Services</a></li>
+           <li><a href="contact.html">Contact</a></li>
+        </ul>
+       </div>
+
+  </footer>
+</body>
+</html>
