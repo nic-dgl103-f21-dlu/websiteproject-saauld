@@ -243,7 +243,62 @@ iframe.center {
   background-color: rgb(201, 201, 201);
 }
 
-    /*FOOTER STYLE START*/ 
+/* YOUTUBE END */
+
+/* /////CONTACT BAR START ////// RESUME ////// */
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* Style the container/contact section */
+.container2 {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+
+/* Create two columns that float next to eachother */
+.column2 {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 20px;
+}
+
+/* Clear floats after the columns */
+.row2:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+    /*CONTACT END, FOOTER STYLE START*/ 
 
     footer {
       background: #686f48;
@@ -324,6 +379,13 @@ display: block;
   color: #686f48;
 }
 
+@media screen and (max-width: 600px) {
+  .footer, .footer-menu, .footer-bottom [type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
 /* END FOOTER STYLING */
 }
 
@@ -360,7 +422,7 @@ display: block;
 <!--HEADER PHOTO END-->
 
 <main>
-  <!-- Services Highlights-->
+  <!-- Services Highlights From IOG's original page-->
 
 <div class="row">
   <div class="column" style="background-color:rgb(255, 255, 255);">
@@ -375,7 +437,7 @@ display: block;
   </div>
 </div>
 
-<div>
+<div> <!--Embed Youtube Video link copied from IOG's Youtube channel-->
   <iframe 
   class="center" autoplay loop muted 
   width="560" 
@@ -386,7 +448,37 @@ display: block;
   frameborder="10" 
   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
   allowfullscreen>
-</iframe> <!--Embed link copied from IOG's Youtube channel-->
+</iframe> 
+</div>
+
+<!-- CONTACT SECTION -->
+<div class="container2">
+  <div style="text-align:center">
+    <h2>Contact Us</h2>
+    <p>Swing by for a cup of coffee, or leave us a message:</p>
+  </div>
+  <div class="row2">
+    <div class="column2">
+      <img src="/w3images/map.jpg" style="width:100%">
+    </div>
+    <div class="column2">
+      <form action="/action_page.php">
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+        <label for="country">Country</label>
+        <select id="country" name="country">
+          <option value="australia">Australia</option>
+          <option value="canada">Canada</option>
+          <option value="usa">USA</option>
+        </select>
+        <label for="subject">Subject</label>
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+  </div>
 </div>
 
 </main>
