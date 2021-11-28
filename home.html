@@ -56,7 +56,7 @@
   /* _____START NAV______ */
 
   nav {
-      background-color: rgb(255, 255, 255,0.5); /*nav colour added */
+      background-color: rgb(255, 255, 255); /*nav colour added */
       margin: auto;
       height: auto;
       float: right;
@@ -120,7 +120,7 @@ header { /*Home, About, Services, Contact, & Social Icons Styling */
 header .wrapper { /*Decides where nav items lay on the page*/
     width: 1000px;
     margin: auto;
-    padding: 0 30px ;
+    padding: 0 30px; /*accidentially clicked something to make this go red*/ 
   }
   
 /******************************/
@@ -128,7 +128,7 @@ header .wrapper { /*Decides where nav items lay on the page*/
 
 #headerphoto, .photo-overlay { 
         width:100%;
-        height: 700px;
+        height: 100%;
         object-fit: cover;
         position: absolute;
         left: 0;
@@ -139,6 +139,7 @@ header .wrapper { /*Decides where nav items lay on the page*/
         background-repeat:no-repeat;
         overflow:hidden;
         display: block;
+        background-color: #fff;
        }
 
        .photo-overlay {
@@ -155,9 +156,10 @@ button {
   border-radius: 35px; /*Corners to make pill shape*/ 
   padding: 18px 35px 15px;
   text-align: center;
-  font-size: 1rem;
+  font-size: 15px;
+  margin-bottom: 100px;
   font-weight: 600;
-  font-family: agenda, sans-serif;
+  font-family: 'Lato', sans-serif;
   text-transform: uppercase;
   color: white;
   letter-spacing: 0.07em;
@@ -166,18 +168,16 @@ button {
   cursor: pointer;
   margin-left: 100px; /* Adds a little space between the logo and the heading */
   margin-right: 800px;
-  /*   transition: all 2s ease-in-out; */
-  /*   transition-property: all;
+  transition: all 2s ease-in-out;
+  transition-property: all;
   transition-duration: 200ms;
   transition-timing-function: ease-in-out;
-  transition-delay: 0s; */
+  transition-delay: 0s;
 }
 
 button:hover {
   background-color: #dfdfdf;
   color: #686f48; 
-  animation-name: example;
-  animation-duration: 4s;
 }
 
 /*Header image Styling End*/
@@ -214,35 +214,67 @@ button:hover {
     margin-right: 5px;
     float: right;
 }
+/* HEADER END */
 
-   /*FOOTER STYLE START*/ 
+/*HIGHLIGHT COLUMNS START */
 
-   footer {
-      bottom: 100px;
+.column {
+  float: left;
+  width: 33.33%; /* This creates equal columns that float next to each other */
+  padding: 10px;
+  padding-left: 35px;
+  height: 300px; 
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content:url();
+  display: table;
+  clear: both;
+}
+
+/* HIGHLIGHT END. YOUTUBE VIDEO START */ 
+
+iframe.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  background-color: rgb(201, 201, 201);
+}
+
+    /*FOOTER STYLE START*/ 
+
+    footer {
       background: #686f48;
       width: 100%;
-      padding-top: 40px;
+      margin-top: 50px;
       color: #fff;
-      background-image: "images/iogphoto1.jpg";
     }
 
-    .footer-content, h4{ /*footer IOG title styling */
-        font-size: 30px;
-        font-weight:bold;
-        line-height: 0.5rem;
-        font-family: 'Mada', sans-serif;
+    footer.content { 
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .footer-content h3{ /*footer IOG title styling */
+        font-size: 2.1rem;
+        font-weight: 1000;
+        line-height: 3rem;
         text-align: center;
-        padding-top: 10px;
+        margin-top:50px;
     }
 
     .footer-content p{ /*footer disclaimerparagraph text */ 
         max-width: 500px;
         margin: 10px auto;
+        margin-top: 0px;
         line-height: 28px;
         font-size: 16px;
         color: #f4f4f4;
         text-align: center;
-        padding-bottom: 10px;
+        font-family: 'Mada', sans-serif;
     }
 
 .footer-bottom{ /*Copyright info*/ 
@@ -251,6 +283,7 @@ button:hover {
     padding: 10px;
     padding-bottom: 10px;
     text-align: left;
+    font-family: 'Mato', sans-serif;
 }
 
 .footer-bottom p{
@@ -279,9 +312,9 @@ display: block;
 }
 
 .footer-menu ul li a{ /*right side nav bar*/
-  color: #2c2c2c;
+  color: #000000;
   text-decoration: none;
-  font-family: 'Mada' sans-serif;
+  font-family: 'Mada', sans-serif;
   font-weight: 100px;
   font-weight: 500;
   font-size: smaller;
@@ -318,7 +351,7 @@ display: block;
 
 <!-- HEADER PHOTO-->
     <div id="headerphoto">
-        <img src="images/iogphoto3.jpeg" type="jpg-photo"></a> <!--Photo sourced from Integrated Operations Group -->
+        <img src="images/2.png" type="jpg-photo"></a> <!--Photo sourced from Integrated Operations Group -->
     </div> <div class="photo-overlay"></div>
 
     <h1>The highest producer of single-stem harvesting in North America. </h1> 
@@ -326,43 +359,42 @@ display: block;
 
 <!--HEADER PHOTO END-->
 
-    <main>
-        <h3>Header 2</h3>
-    <p> <b> Below we'll be critiquing the <a href="https://ascentphysiotherapy.com/news.html" style="color: rgb(0, 0, 0);">Ascent Physiotherapy Website. </a> </b></p>
-        
-        <h3> Header 3</h3>
-        Text goes here.
-        
-        <figure> <img src="images/1.png" alt="Figure 1. Landing page and navigation bar for Ascent Physiotherapy" width="500">
-        <figcaption><b> Figure 1. Caption. </b></figcaption></figure>  <!-- main page photo with figure caption-->
+<main>
+  <!-- Services Highlights-->
 
-        <h3>Header 3</h3>
-        </p> Paragraph goes here. </p>
-        
-        <figure>
-        <img src="images/2.png"
-        alt="Figure 2. Stand alone landing page block."
-        width="500">
-        <figcaption><b> Figure 2. Caption goes here. </b></figcaption></figure>
+<div class="row">
+  <div class="column" style="background-color:rgb(255, 255, 255);">
+    <img src="images/urban forestry.png" width="400" type="jpg-photo"></a>
+  </div>
+  <div class="column" style="background-color:rgb(255, 255, 255);">
+    <img src="images/utilities.png" width="400" type="jpg-photo"></a>
+  </div>
+  <div class="column" style="background-color:rgb(255, 255, 255);">
+    <img src="images/windfarming.png" width="400" type="jpg-photo"></a>
 
-        <h3>Header 3.1</h3>
-    <p> Paragraph goes here.</p>
-        
-        <figure>
-        <img src="images/4.png"
-        alt="Figure 3. Stand alone landing page block."
-        width="500">
-        <figcaption><b> Figure 3. Caption goes here. </b></figcaption></figure>
-    
-     <h3>Conclusion</h3> 
-     <p class="conclusion"> Paragraph goes here. </p>
+  </div>
+</div>
+
+<div>
+  <iframe 
+  class="center" autoplay loop muted 
+  width="560" 
+  height="315" 
+  position="center" 
+  src="https://www.youtube.com/embed/F7DQFPi7oas" 
+  title="YouTube video player" 
+  frameborder="10" 
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+  allowfullscreen>
+</iframe> <!--Embed link copied from IOG's Youtube channel-->
+</div>
 
 </main>
+
 <!--FOOTER-->
 <footer>
-  <im src="logo.png" alt="Integrated Operations Group Logo" width:100> </im>  
     <div class="footer-content"> <!-- wraps the content so that the background colour can spread from edge to edge of the browser window -->
-      <p><em>This is a fictional website that was designed and coded as an educational exercise. 
+        <p><em>This is a fictional website that was designed and coded as an educational exercise. 
             It is not intended to be seen outside of the class environment. 
             None of the content and images were approved by the business owner. </em></p></div> 
             
