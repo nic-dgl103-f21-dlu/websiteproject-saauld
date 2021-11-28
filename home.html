@@ -1,26 +1,23 @@
-<!DOCTYPE html> <!--DOCTYPE and html added-->
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <!-- DGL 103 DLU1 - Shayla Auld - Assignment 6 -->
-  <title>Integrated Operations Group</title>
-  <meta charset="utf-8">
-  <link rel="stylesheet" href="home.css"> <!--CSS stylesheet linked-->
-  <link rel="icon" href="images/icon.jpg" type="images/icon.jpg">  <!--IOG Icon appears in tab-->
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Mada:wght@300&display=swap');
+    <!-- DGL 103 DLU1 - Shayla Auld - Integrated Operations Group Website -->
+    <title>Integrated Operations Group</title>
+    <meta charset="utf-8">
+    <link rel="icon" href="images/icon.png" type="images/icon.png"> <!--IOG Icon appears in tab-->
+    <style>
+    
+    @import url('https://fonts.googleapis.com/css2?family=Mada:wght@300&display=swap'); /* Mada font imported for header titles */
+    @import url('https://fonts.googleapis.com/css2?family=Lato:wght@900&family=Mada:wght@300&display=swap'); /*Lato font imported for body*/
 
-    * {
-      box-sizing: border-box;
+    body { 
+        font-size: 100%; 
+        font-family:'Mada', sans-serif; 
+        color:rgb(0, 0, 0);
+        margin: 0;
     }
-
-    body {
-      font-family: 'Mada' sans-serif; 
-      margin: 0;
-      color: #191645;
-      font-size: 100%;
-    }
-
+    
     header {
       padding: 15px;
       width: 1000px; /* centers the content and gives it negative space on either side */
@@ -32,24 +29,33 @@
     h1 {
       margin-left: 20px; /* Adds a little space between the logo and the heading */
       font-size: 35px; /* font sizes added for headers */
+      font-family: 'Lato', sans-serif;
+    }
+
+    h2 {
+        font-family: 'Lato', sans-serif;
+        font-weight: bold;
     }
 
     h3 {
-        font-size: 25px;
+        font-family: 'Lato', sans-serif;
     }
 
-    /* _____START NAV______ */
+       /* _____START NAV______ */
 
   nav {
-      background-color: rgba(255, 255, 255, 0.5); /*nav colour added */
+      background-color: rgb(255, 255, 255,0.5); /*nav colour added */
       margin: auto;
       height: auto;
+      padding: 0 300px;
     }
 
-  nav .wrapper {
+  header .wrapper {
     width: 1000px;
     margin: auto;
+    padding: 0 300px ;
   }
+  
   nav ul {
     display: flex; /* the flex-container for the list items makes the flex-items sit side by side */
     justify-content: space-between; /* spreads the flex-items starting at the start and end of the main axis */
@@ -57,7 +63,7 @@
     margin: auto;
     display: flex;
     align-items: center;
-    padding: 0 300px;
+    padding: 0;
   }
 
   nav li a:hover { 
@@ -66,287 +72,245 @@
   }
   
   nav li a { 
-    padding: 15px;
+    padding: 15px ;
     display: inline-block; /* an anchor is an inline element so it has no box model vertical measurements, this makes the anchor behave like a block element that sits inline like an inline element */
     text-decoration: none;
-    font-weight: bold;
-    color: #191645;
+    font-weight: bold; 
+    color: #2c2c2c; /*Text colour in NAV */
   }
 
-  /* ____END NAV____ */
-
-  /* START HEADER PHOTO OVERLAY */
-  #header-photo,
-.header-overlay {
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: -1;
+  * {
+  box-sizing: border-box;
 }
 
-.header-overlay {
-  background-color: black;
-  opacity: 0.3;
+body {
+  font-family:  sans-serif;
+  margin: 0;
 }
 
-h1, /*CONTACT US HEADER */
-h2 {
-  color: rgb(0, 0, 0);
-  font-family: 'Mada';
-  font-weight: bold;
-  text-align: center;
+/*END NAV *//* HEADER START */
+
+.header { /* Nav Bar Box */
+  background-color: rgb(255, 255, 255);
+  box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+  position: fixed;
+  width: 100%;
+  z-index: 3;
 }
 
-h1 {
-  font-size: 6rem;
-  margin-top: 30vh;
+.header ul { /* NAV Buttons */
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: rgb(255, 255, 255);
 }
 
-h2 {
-  font-size: 3rem;
+.header li a {
+  display: block;
+  padding: 20px 20px;
+  border-right: 1px solid #f4f4f4;
+  text-decoration: none;
 }
-/* END HEADER OVER LAY */
 
-  main { /* centers the content and gives it negative space on either side */
-  padding: 15px;
-  width: 1000px;
-  margin: auto;
-  display: flex; /* the flex-container for article and aside (the flex items) makes the flex items sit side by side */
+.header .logo {
+  display: block;
+  float: left;
+  font-size: 2em;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+.social-icon { /*Facebook & Twitter NAV Icons */
+    padding: 5px;
+    margin-left: 10px;
+    margin-right: 5px;
+}
+
+/* menu */
+
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: .2s ease-out;
+}
+
+@media (min-width: 48em) { /* 48em=768px*/
+  .header li {
+    float: left;
+  }
+  .header li a {
+    padding: 20px 30px;
+  }
+  .header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  .header .menu-icon {
+    display: none;
   }
 
-  figure {
-    margin: 0; /* resets the default figure margin, applies to both the image in the article and the aside */
-  }
+   /*FOOTER STYLE START*/ 
 
-  figcaption {
-    color: grey;
-  }
- /* Left side article start */
-
-  article {
-    margin-right: 30px; /* adds a little space between the article and the aside */
-    flex-basis: 0; /* resets the default width of the flex-item to 0 */
-    flex-grow: 2; /* grows the width of the flex item so that it is 2/3s of the container, 2+1=3 */
-    padding-top: 1000px;
-  }
-  
-  article img {
-    width: 70%; /* makes the image the full width of its parent element */
-  }
-
-  /* Left side end. Right side column start */ 
-  aside {
-    padding: 15px;
-    padding-top: 1000px;
-    font-weight: lighter;
-    flex-basis: 0; /* resets the default width of the flex item to 0 */
-    flex-grow: 3; /* grows the width of the flex item so that it is one third of the container, 2+1=3 */
-    display: flex; /* the flex container for the aside content makes the flex items sit side by side */
-    flex-wrap: wrap; /* makes the flex items sit one below the other */
-    align-content: space-between; /* spreads the flex items evenly starting at the start and end of the cross axis */
-  }
-    
-  /* Right side column end. Start footer */ 
-
-    footer {
-      background-color: #686f48;
-      color: white;
-      height: 80px;
-      padding-top: 30px;
-      padding-left: 140px;
+   footer {
+      bottom: 100px;
+      background: #686f48;
+      width: 100%;
+      padding-top: 40px;
+      color: #fff;
+      background-image: "images/iogphoto1.jpg";
     }
 
-    footer.wrapper {
-      width: 800px;
-      margin: 100px;
-      padding: 15px;
+    footer.content { 
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
- /* End footer */
 
-</style>
-</head> 
+    .footer-content h3{ /*footer IOG title styling */
+        font-size: 2.1rem;
+        font-weight: 1000;
+        line-height: 3rem;
+        text-align: center;
+    }
+
+    .footer-content p{ /*footer disclaimerparagraph text */ 
+        max-width: 500px;
+        margin: 10px auto;
+        line-height: 28px;
+        font-size: 16px;
+        color: #f4f4f4;
+        text-align: center;
+    }
+
+.footer-bottom{ /*Copyright info*/ 
+    background: #505538;
+    width: 100%;
+    padding: 10px;
+    padding-bottom: 10px;
+    text-align: left;
+}
+
+.footer-bottom p{
+   float: left center;
+   font-size: 14px;
+}
+.footer-bottom p a{
+  font-size: 16px;
+}
+.footer-bottom span{ /*Copyright info end*/
+    opacity: .4;
+    font-weight: 200;
+}
+
+.footer-menu{
+  float: right;
+}
+
+.footer-menu ul{
+  display: flex;
+}
+
+.footer-menu ul li{
+padding-right: 10px;
+display: block;
+}
+
+.footer-menu ul li a{ /*right side nav bar*/
+  color: #000000;
+  text-decoration: none;
+  font-family: 'Mada'sans-serif;
+  font-weight: 100px;
+  font-weight: 500;
+  font-size: smaller;
+}
+
+.footer-menu ul li a:hover{
+  color: #686f48;
+}
+
+/* End footer */
+}
+
+    </style>
+</head>
 
 <body>
-    <header> 
-      <a href="home.html"><img src="images/logo.jpg" alt="Integrated Operations Group Logo" width="200"></a>
-    <nav>
+    <header class="header">
+
+      <a href="home.html" class="logo"><img src="images/logo.jpg" ALT="Integrated Operations Group Logo" width="200"></a>
+      <nav> 
       <div class="wrapper"> <!-- Wraps the content so that the background colour can spread from edge to edge of the browser window -->
-          <ul> <!-- Using a list for navigation items is the correct semantic way to format them -->
+          <ul class="menu"><!-- Using a list for navigation items is the correct semantic way to format them, REMOVE! -->
             <li><a  href="home.html">Home</a></li>
             <li><a  href="about.html">About</a></li>
             <li><a  href="services.html">Services</a></li>
             <li><a  href="contact.html">Contact</a></li>
-            <a href="https://www.facebook.com/integratedops" target="blank" title="Integrated Operations Group Facebook"> <img src="images/facebookicon.png" center width="30" alt="Integrated Operations Group Facebook"></a> <!--Facebook NAV Link-->
-            <a href="https://www.instagram.com/integrated_ops/" target="blank" title="Integrated Operations Group Instagram"> <img src="images/instaicon.png" center width="30" alt="Integrated Operations Group Instagram"></a> <!--Instagram NAV Link-->
+            <a href="https://www.facebook.com/integratedops" class="social-icon" target="blank" title="Integrated Operations Group Facebook"> <img src="images/facebookicon.png"  width="30" alt="Integrated Operations Group Facebook"></a> <!--Facebook icon-->
+            <a href="https://www.instagram.com/integrated_ops/" class="social-icon" target="blank" title="Integrated Operations Group Instagram"> <img src="images/instaicon.png"  width="27" alt="Integrated Operations Group Instagram"></a> <!--Instagram Link-->
           </ul>
       </div>
-    </nav>
-    </header>
+          </header>
 
-    <!-- Header Photo START-->
-    <section id="header-photo">
-      <img src="images/iogphoto4.jpeg" style="width:100%"></a>
-      <div class="header-overlay"></div>
-      <h1>THIS IS A HEADER</h1>
-      <h2>THIS IS A FOOTER.</h2>
-    </section>
-    <!--Header Photo END-->
+<!-- Header Photo-->
+    <section>
+        <img src="images/iogphoto4.jpeg" style="width:100%"></a>
+      </section>
 
     <main>
-      <article>  
-         <h3>Contact Us</h3>
-        <p> NIC has excellent staff, faculty, and student services to help you meet your goals. </p>
-            <div> <!--space divider--> </div>
-            <p>Use our form below to get in touch with us, ask questions, provide feedback, or learn
-             how you can take part in our Communication & Design program:</p> <!--New paragraph info-->
+        <h2>Header 2</h2>
+    <p> <b> Below we'll be critiquing the <a href="https://ascentphysiotherapy.com/news.html" style="color: rgb(0, 0, 0);">Ascent Physiotherapy Website. </a> </b></p>
+        
+        <h3> Header 3</h3>
+        Text goes here.
+        
+        <figure> <img src="images/1.png" alt="Figure 1. Landing page and navigation bar for Ascent Physiotherapy" width="500">
+        <figcaption><b> Figure 1. Caption. </b></figcaption></figure>  <!-- main page photo with figure caption-->
 
-            <!-- Left side Form Wrapper Start-->
-            <div class="wrapper-form">
-                <form method="post" action="https://learndigital.dev/programs/dgl103-form.php">
-                  <label for="fname">First Name<span class="label-required"> * </span></label>
-                  <input type="text" id="fname" name="firstname" placeholder="Ex: Jane">
-              
-                  <label for="lname">Last Name<span class="label-required"> * </span></label>
-                  <input type="text" id="lname" name="lastname" placeholder="Ex: Doe">
-              
-                  <label for="email">Email <span class="label-required"> * </span></label>
-                  <input type="email" id="email" name="email" placeholder="Ex: jane@gmail.com" required>
+        <h3>Header 3</h3>
+        </p> Paragraph goes here. </p>
+        
+        <figure>
+        <img src="images/2.png"
+        alt="Figure 2. Stand alone landing page block."
+        width="500">
+        <figcaption><b> Figure 2. Caption goes here. </b></figcaption></figure>
 
-                  <label for="tel">Phone Number </label>
-                  <input type="tel" id="tel" name="tel" placeholder="Ex: 555-555-5555">
+        <h3>Header 3.1</h3>
+    <p> Paragraph goes here.</p>
+        
+        <figure>
+        <img src="images/4.png"
+        alt="Figure 3. Stand alone landing page block."
+        width="500">
+        <figcaption><b> Figure 3. Caption goes here. </b></figcaption></figure>
+    
+     <h3>Conclusion</h3> 
+     <p class="conclusion"> Paragraph goes here. </p>
 
-                  <label for="city">City </label>
-                  <input type="text" id="city" name="city" placeholder="Ex: Campbell River">
+</main>
+<!--FOOTER-->
+<footer>
+    <div class="footer-content"> <!-- wraps the content so that the background colour can spread from edge to edge of the browser window -->
+        <h3>Integrated Operations Group</h3>
+        <p><em>This is a fictional website that was designed and coded as an educational exercise. 
+            It is not intended to be seen outside of the class environment. 
+            None of the content and images were approved by the business owner. </em></p></div> 
+            
+    <div class="footer-bottom">
+        <p>Copyright &copy; Shayla Auld 2021</a>  </p>
+    </div>           
 
-                  <label for="country">Country </label>
-                  <input type="text" id="country" name="country" placeholder="Ex: Canada">
-              
-                  <label for="stream">Stream of Interest</label>
-                  <select id="stream" name="stream">
-                    <option value="design and development">Design & Development</option>
-                    <option value="design and media">Design & Media</option>
-                  </select>
-              
-                  <fieldset>
-                    <legend>Choose how you would prefer to be contacted:</legend>
-                    <input type="radio" id="Phone" name="phone" value="Phone">
-                    <label for="phone">Phone</label><br>
+    <div class="footer-menu">
+        <ul>
+           <li><a href="home.html">Home</a></li>
+           <li><a href="about.html">About</a></li>
+           <li><a href="services.html">Services</a></li>
+           <li><a href="contact.html">Contact</a></li>
+        </ul>
+       </div>
 
-                    <input type="radio" id="email" name="email" value="Email"> <!--W3 error with 'email duplication'-->
-                    <label for="email">Email</label><br>
-
-                    <input type="radio" id="text" name="text" value="Text">
-                    <label for="text">Text</label>
-                  </fieldset>
-              
-                  <label for="message">Message</label>
-                  <textarea id="message" name="message" placeholder="What can we help you with?" style="height:150px"></textarea>
-              
-                  <div class="wrapper-button">
-                    <input type="reset" value="Reset">
-                    <input type="submit" value="Submit">
-                  </div>
-                </form>
-            </div>
-        </article>
-              <!--Form End-->
-
-
-    <!--Right Side Table Start-->
-    <aside> 
-          <div> <!-- Wraps the content at the top of the aside in a div to group it as one flex item -->
-          <figure>
-            <img src="images/comms-nic.png" alt="Matthew Boucher, North Island College Communications & Design Graduate" width="700"> <!--Added photos, changed alt text-->
-            <figcaption><i> Photo retrieved from NIC's Communications Design Diploma Gallery.</i></figcaption>
-          </figure></div>
-
-          <!--Caption for Figure 1:-->
-          <p> Our graduates have a wide range of success stories for you to learn about. 
-            Learn more about our alumni graduates like Matthew, in our Gallery below: </p>
-            <form action="https://www.nic.bc.ca/programs/business-applied-studies/digital-design-development/communication-design-diploma/">
-                <button type="submit">Visit NIC's Alumni Gallery </button>
-              </form>
-          
-          <!-- <div class="wrapper">, table begins -->
-              <table>
-                   <caption> Year 1 Course Requirements & Timetable: 2021-2022</caption>
-                   <thead> 
-
-    <tr> <!--6 Rows for DGL Classes-->
-      <th> DGL 101</th>
-      <th> DGL 102</th>
-      <th> DGL 103</th>
-      <th> DGL 105</th>
-      <th> DGL 111</th>
-      <th> DGL 113</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr> <!--4 Columns With Available class times for each course-->
-      <td>Wed 1-3</td>
-      <td>Mon 5-7</td>
-      <td>Tue 11-1</td>
-      <td>Wed 1-3</td>
-      <td>Fri 12-1</td>
-      <td>Fri 1-2</td>
-    </tr>
-
-    <tr>
-        <td>Tues 1-3</td>
-        <td>Mon 4-6</td>
-        <td>Tue 9-10</td>
-        <td>Wed 1-3</td>
-        <td>Tue 1-4</td>
-        <td>Fri 9-12</td>
-    </tr>
-
-    <tr>
-        <td>Mon 1-3 </td>
-        <td>Thurs 2-3</td>
-        <td>Fri 12-2</td>
-        <td>Thurs 4-6</td>
-        <td>Fri 12-1</td>
-        <td>Mon 10-11</td>
-    </tr>
-
-    <tr>
-      <td>Fri 10-2</td>
-      <td colspan="6" class="merge">--- Classes not yet available ---</td>
-    </tr>
-
-  </tbody>
-  <tfoot>
-    <tr>
-      <td colspan="6">All information up to date as of Nov 18, 2021</td>
-    </tr>
-  </tfoot>
-</table>
-
-<figure>
-    <br>
-    <img src="images/people-g34a9f551b_1280.jpg" alt="NIC Students" width="700">
-    <figcaption><i>Join one of our on-campus activities happening this year.</i></figcaption> <!--Figcaption and photos added added; -->
-    <p>Connect with like-minded students by getting involved with a some of our on-campus activities 
-     and events this year! This November, check out our International Education Week Series, 
-     join our International Student Panel, or take part in our virtual Adventour Scavenger Hunt.</p>
-
-<p><b>Learn more, here:</b></p> <!--Subheader-->
-<form action="https://www.nic.bc.ca/student-life-support-services/student-life/event-calendar/"> <!--Event calendar button-->
-    <button type="submit">Visit NIC's Event Calendar</button>
-  </form>
-</figure>
-</aside>
-
-    </main>
-    <footer>
-      <div class="wrapper"> <!-- wraps the content so that the background colour can spread from edge to edge of the browser window -->
-        DGL 103 HTML/CSS Assignment 6
-      </div> 
-    </footer>
+  </footer>
 </body>
-
 </html>
