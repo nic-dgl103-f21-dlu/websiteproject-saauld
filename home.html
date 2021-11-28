@@ -12,8 +12,6 @@
     @import url('https://fonts.googleapis.com/css2?family=Lato:wght@900&family=Mada:wght@300&display=swap'); /*Lato font imported for body*/
 
     body { 
-        font-size: 100%; 
-        font-family:'Mada', sans-serif; 
         color:rgb(0, 0, 0);
         margin: 0;
     }
@@ -21,19 +19,37 @@
     /* Text Styling */
     /**********************/
 
-    h1 {
-      margin-left: 20px; /* Adds a little space between the logo and the heading */
+    h1, h2 { /* Mission Statement Text Start*/
+      color: white;
+      font-weight: bold;
+      text-align: left;
+      margin-left: 100px; /* Adds a little space between the logo and the heading */
+      margin-right: 800px;
       font-size: 35px; /* font sizes added for headers */
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-top: 350px;
       font-family: 'Lato', sans-serif;
+      font-weight: bold;
     }
 
     h2 {
-        font-family: 'Lato', sans-serif;
+        font-family: sans-serif;
         font-weight: bold;
-    }
+        margin-top: 20px;
+        font-size: 1rem;
+    } /* Mission Statement Text End*/
 
     h3 {
         font-family: 'Lato', sans-serif;
+        margin-top: 350px;
+        padding: 50
+    }
+
+    h4 {
+      font-family: 'Mada', sans-serif;
     }
 
 /********************************/
@@ -44,7 +60,6 @@
       margin: auto;
       height: auto;
       float: right;
-      display: block;
       padding-right: 50px;
       text-decoration: none;
       font-family:  'Lato', sans-serif;
@@ -55,7 +70,7 @@
     justify-content: space-between; /* spreads the flex-items starting at the start and end of the main axis */
     list-style-type: none; /* removes the list bullets */
     margin: auto;
-    display: flex;
+    display: flex; /* affects social media icons */ 
     align-items: center;
     padding: 0;
   }
@@ -68,7 +83,7 @@
   nav li a { 
     padding: 15px ;
     display: inline-block; /* an anchor is an inline element so it has no box model vertical measurements, this makes the anchor behave like a block element that sits inline like an inline element */
-    text-decoration: none;
+    text-decoration: none; /*removes link underline*/
     font-weight: bold; 
     color: #2c2c2c;
   }
@@ -97,9 +112,9 @@ header { /*Home, About, Services, Contact, & Social Icons Styling */
 .header { /* Nav Bar Box, makes nav items sit spread apart */
   background-color: rgb(255, 255, 255);
   box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
-  position: fixed;
   width: 100%;
-  z-index: 3;
+  z-index: 3; 
+  padding: 5 10; /*REDUCE TO MAKE NAV BAR SMALLER*/
 }
 
 header .wrapper { /*Decides where nav items lay on the page*/
@@ -109,22 +124,61 @@ header .wrapper { /*Decides where nav items lay on the page*/
   }
   
 /******************************/
-/*Header Image Styling Start */
+/*NAV END. HEADER IMG STYLING START */
 
-#headerphoto { 
+#headerphoto, .photo-overlay { 
         width:100%;
         height: 700px;
+        object-fit: cover;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: -1;
         margin:auto;
         background-position:center;
-        background-repeat:repeat;
+        background-repeat:no-repeat;
         overflow:hidden;
         display: block;
+       }
+
+       .photo-overlay {
+         background-color: #0f0f0f;
+         opacity: 0.4;
        }
 
 #headerphoto img{ 
     width: 100%;
     display: block;
 } 
+
+button {
+  border-radius: 35px; /*Corners to make pill shape*/ 
+  padding: 18px 35px 15px;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: agenda, sans-serif;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 0.07em;
+  background-color: #686f48;
+  border: 1px solid #686f48;
+  cursor: pointer;
+  margin-left: 100px; /* Adds a little space between the logo and the heading */
+  margin-right: 800px;
+  /*   transition: all 2s ease-in-out; */
+  /*   transition-property: all;
+  transition-duration: 200ms;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0s; */
+}
+
+button:hover {
+  background-color: #dfdfdf;
+  color: #686f48; 
+  animation-name: example;
+  animation-duration: 4s;
+}
 
 /*Header image Styling End*/
 /*****************************/
@@ -172,17 +226,13 @@ header .wrapper { /*Decides where nav items lay on the page*/
       background-image: "images/iogphoto1.jpg";
     }
 
-    footer.content { 
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .footer-content h3{ /*footer IOG title styling */
-        font-size: 2.1rem;
-        font-weight: 1000;
-        line-height: 3rem;
+    .footer-content, h4{ /*footer IOG title styling */
+        font-size: 30px;
+        font-weight:bold;
+        line-height: 0.5rem;
+        font-family: 'Mada', sans-serif;
         text-align: center;
+        padding-top: 10px;
     }
 
     .footer-content p{ /*footer disclaimerparagraph text */ 
@@ -192,6 +242,7 @@ header .wrapper { /*Decides where nav items lay on the page*/
         font-size: 16px;
         color: #f4f4f4;
         text-align: center;
+        padding-bottom: 10px;
     }
 
 .footer-bottom{ /*Copyright info*/ 
@@ -228,9 +279,9 @@ display: block;
 }
 
 .footer-menu ul li a{ /*right side nav bar*/
-  color: #000000;
+  color: #2c2c2c;
   text-decoration: none;
-  font-family: 'Mada'sans-serif;
+  font-family: 'Mada' sans-serif;
   font-weight: 100px;
   font-weight: 500;
   font-size: smaller;
@@ -267,12 +318,16 @@ display: block;
 
 <!-- HEADER PHOTO-->
     <div id="headerphoto">
-        <img src="images/iogphoto4.jpeg"></a> <!--Photo sourced from Integrated Operations Group -->
-    </div>
+        <img src="images/iogphoto3.jpeg" type="jpg-photo"></a> <!--Photo sourced from Integrated Operations Group -->
+    </div> <div class="photo-overlay"></div>
+
+    <h1>The highest producer of single-stem harvesting in North America. </h1> 
+    <form action= "about.html"> <button type="submit"> Learn More</button> </form> <!--Call to action-->
+
 <!--HEADER PHOTO END-->
 
     <main>
-        <h2>Header 2</h2>
+        <h3>Header 2</h3>
     <p> <b> Below we'll be critiquing the <a href="https://ascentphysiotherapy.com/news.html" style="color: rgb(0, 0, 0);">Ascent Physiotherapy Website. </a> </b></p>
         
         <h3> Header 3</h3>
@@ -305,9 +360,9 @@ display: block;
 </main>
 <!--FOOTER-->
 <footer>
+  <im src="logo.png" alt="Integrated Operations Group Logo" width:100> </im>  
     <div class="footer-content"> <!-- wraps the content so that the background colour can spread from edge to edge of the browser window -->
-        <h3>Integrated Operations Group</h3>
-        <p><em>This is a fictional website that was designed and coded as an educational exercise. 
+      <p><em>This is a fictional website that was designed and coded as an educational exercise. 
             It is not intended to be seen outside of the class environment. 
             None of the content and images were approved by the business owner. </em></p></div> 
             
