@@ -18,9 +18,6 @@
         margin: 0;
     }
 
-    /* Text Styling */
-    /**********************/
-
     h1 {
       margin-left: 20px; /* Adds a little space between the logo and the heading */
       font-size: 35px; /* font sizes added for headers */
@@ -30,11 +27,21 @@
     h2 {
         font-family: 'Lato', sans-serif;
         font-weight: bold;
+        font-size: 50px;
+        margin-left: 100px;
     }
 
     h3 {
         font-family: 'Lato', sans-serif;
+        font-size: 14px;
     }
+
+    p {
+        font-family: 'Mada', sans-serif;
+        font-size: 16px;
+        margin-left: 100px;
+    }
+
 
 /********************************/
   /* _____START NAV______ */
@@ -161,37 +168,30 @@ header .wrapper { /*Decides where nav items lay on the page*/
     float: right;
 }
 
-   /*FOOTER STYLE START*/ 
+/*CONTACT END, FOOTER STYLE START*/ 
 
-   footer {
-      bottom: 100px;
+footer {
       background: #686f48;
       width: 100%;
-      padding-top: 40px;
       color: #fff;
-      background-image: "images/iogphoto1.jpg";
     }
 
-    footer.content { 
+    .footer-content { 
       display: flex;
       align-items: center;
       justify-content: center;
-    }
-
-    .footer-content h3{ /*footer IOG title styling */
-        font-size: 2.1rem;
-        font-weight: 1000;
-        line-height: 3rem;
-        text-align: center;
+      margin-top: 50px;
     }
 
     .footer-content p{ /*footer disclaimerparagraph text */ 
         max-width: 500px;
         margin: 10px auto;
+        margin-top: 20px;
         line-height: 28px;
         font-size: 16px;
         color: #f4f4f4;
         text-align: center;
+        font-family: 'Mada', sans-serif;
     }
 
 .footer-bottom{ /*Copyright info*/ 
@@ -199,21 +199,21 @@ header .wrapper { /*Decides where nav items lay on the page*/
     width: 100%;
     padding: 10px;
     padding-bottom: 10px;
-    text-align: left;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
 }
 
 .footer-bottom p{
    float: left center;
    font-size: 14px;
 }
-.footer-bottom p a{
-  font-size: 16px;
-}
+
 .footer-bottom span{ /*Copyright info end*/
     opacity: .4;
     font-weight: 200;
 }
 
+/*right side nav bar start*/
 .footer-menu{
   float: right;
 }
@@ -227,12 +227,11 @@ padding-right: 10px;
 display: block;
 }
 
-.footer-menu ul li a{ /*right side nav bar*/
+.footer-menu ul li a{ 
   color: #000000;
   text-decoration: none;
-  font-family: 'Mada'sans-serif;
+  font-family: 'Mada', sans-serif;
   font-weight: 100px;
-  font-weight: 500;
   font-size: smaller;
 }
 
@@ -240,7 +239,12 @@ display: block;
   color: #686f48;
 }
 
-/* END FOOTER STYLING */
+@media screen and (max-width: 600px) {
+  .footer, .footer-menu, .footer-bottom [type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
 }
 
     </style>
@@ -295,13 +299,12 @@ display: block;
 <!--FOOTER-->
 <footer>
     <div class="footer-content"> <!-- wraps the content so that the background colour can spread from edge to edge of the browser window -->
-        <h3>Integrated Operations Group</h3>
         <p><em>This is a fictional website that was designed and coded as an educational exercise. 
             It is not intended to be seen outside of the class environment. 
             None of the content and images were approved by the business owner. </em></p></div> 
             
     <div class="footer-bottom">
-        <p>Copyright &copy; Shayla Auld 2021</a>  </p>
+        <h3>Copyright &copy; Shayla Auld 2021</h3>
     </div>           
 
     <div class="footer-menu">

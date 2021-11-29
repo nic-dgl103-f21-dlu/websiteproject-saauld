@@ -53,6 +53,7 @@
       font-family: 'Lato', sans-serif;
       font-size: 20px;
       margin-top: 50px;
+      color: #313131;
     }
 
 /********************************/
@@ -226,6 +227,8 @@ button:hover {
   width: 33.33%; /* This creates equal columns that float next to each other */
   padding: 10px;
   padding-left: 35px;
+  padding-top: 50px;
+  padding-top: 50px;
   height: 300px; 
 }
 
@@ -238,11 +241,12 @@ button:hover {
 
 /* HIGHLIGHT END. YOUTUBE VIDEO START */ 
 
-iframe.center {
+iframe.youtube {
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 100%;
+  margin-top: 50px;
   background-color: rgb(201, 201, 201);
 }
 
@@ -250,7 +254,7 @@ iframe.center {
 
 /* /////CONTACT US SECTION START ////// RESUME ////// */
 
-input[type=text], select, textarea {
+input[type=text], select, textarea { /*Affects textboxes */
   width: 100%;
   padding: 12px;
   border: 1px solid #ccc;
@@ -260,22 +264,26 @@ input[type=text], select, textarea {
   font-family: 'Mada', sans-serif;
 }
 
-input[type=submit] {
+input[type=submitbutton] { /*Submit button*/ 
   background-color: #686f48;
   color: white;
   padding: 12px 10px;
   border: none;
+  text-align: center;
   cursor: pointer;
-  font-family: 'Mada', sans-serif;
+  font-family: 'Lato', sans-serif;
+  border-radius: 35px; /*Corners to make pill shape*/ 
 }
 
-input[type=submit]:hover {
+input[type=submitbutton]:hover { /*Submit button hover*/ 
   background-color: #3f3f3f;
-  font-family: 'Mada', sans-serif;
+  color:white;
+  font-family: 'Lato', sans-serif;
+    padding: 12px 10px;
+  border-radius: 35px; /*Corners to make pill shape*/ 
 }
 
-/* Style the container/contact section */
-.wrapperform { /* Affects 'How Can We Help? paragraph' */
+.wrapperform { /* Affects 'How Can We Help?' paragraph */
   border-radius: 5px;
   background-color: #f2f2f2;
   padding: 10px;
@@ -283,7 +291,6 @@ input[type=submit]:hover {
   font-size: 18px;
 }
 
-/* Create two columns that float next to eachother */
 .column2 {
   float: center;
   width: 50%;
@@ -424,24 +431,22 @@ display: block;
 <!--HEADER PHOTO END-->
 
 <main>
-  <!-- Services Highlights From IOG's original page-->
-
+  <!-- Services Highlights From IOG's original page with links to Services Page-->
 <div class="row">
   <div class="column" style="background-color:rgb(255, 255, 255);">
-    <img src="images/urban forestry.png" width="400" type="jpg-photo"></a>
+    <a href="services.html"> <img src="images/urban forestry.png" alt="Urban Forestry" width="400" type="png-photo"></a>
   </div>
   <div class="column" style="background-color:rgb(255, 255, 255);">
-    <img src="images/utilities.png" width="400" type="jpg-photo"></a>
+    <a href="services.html"> <img src="images/utilities.png" alt="Utilities" width="400" type="png-photo"></a>
   </div>
   <div class="column" style="background-color:rgb(255, 255, 255);">
-    <img src="images/windfarming.png" width="400" type="jpg-photo"></a>
-
+    <a href="services.html"> <img src="images/windfarming.png" alt="Wind Farming" width="400" type="png-photo"></a>
   </div>
 </div>
 
 <div> <!--Embed Youtube Video link copied from IOG's Youtube channel-->
   <iframe 
-  class="center" autoplay loop muted 
+  class="youtube" autoplay loop muted 
   width="560" 
   height="315" 
   position="center" 
@@ -453,7 +458,7 @@ display: block;
 </iframe> 
 </div>
 
-<!-- CONTACT SECTION -->
+<!-- CONTACT FORM SECTION -->
 <div class="wrapper-form">
   <div style="text-align:center">
     <h5>How can we help?</h5>
@@ -483,9 +488,9 @@ display: block;
         </select>
         <label for="Business">Business Name</label>
         <input type="text" id="business" name="business" placeholder="Your business or organization">
-        <label for="subject">Message</label>
+        <label for="Message">Message</label>
         <textarea id="subject" name="subject" placeholder="Write something..." style="height:170px"></textarea>
-        <input type="submit" value="Submit">
+        <input type="submitbutton" value="SUBMIT">
       </form>
     </div>
   </div>
@@ -501,7 +506,7 @@ display: block;
             None of the content and images were approved by the business owner. </em></p></div> 
             
     <div class="footer-bottom">
-        <p>Copyright &copy; Shayla Auld 2021</a>  </p>
+        <p>Copyright &copy; Shayla Auld 2021</a></p>
     </div>           
 
     <div class="footer-menu">
