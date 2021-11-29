@@ -12,8 +12,6 @@
     @import url('https://fonts.googleapis.com/css2?family=Lato:wght@900&family=Mada:wght@300&display=swap'); /*Lato font imported for body*/
 
     body { 
-        font-size: 100%; 
-        font-family:'Mada', sans-serif; 
         color:rgb(0, 0, 0);
         margin: 0;
     }
@@ -22,7 +20,7 @@
     /**********************/
 
     h1 {
-      margin-left: 20px; /* Adds a little space between the logo and the heading */
+      margin-left: 30px; /* Adds a little space between the logo and the heading */
       font-size: 35px; /* font sizes added for headers */
       font-family: 'Lato', sans-serif;
     }
@@ -31,10 +29,18 @@
         font-family: 'Lato', sans-serif;
         font-weight: bold;
         font-size: 50px;
-        margin-left: 100px;
+        margin-left: 30px;
     }
 
     h3 {
+        font-family: 'Lato', sans-serif;
+        font-size: 35px;
+        margin-left: 30px;
+        font-weight: bold;
+    }
+
+
+    h4 {
         font-family: 'Lato', sans-serif;
         font-size: 14px;
     }
@@ -42,9 +48,9 @@
     p {
         font-family: 'Mada', sans-serif;
         font-size: 16px;
-        margin-left: 100px;
+        margin-left: 30px;
+        margin-right: 30px;
     }
-
 
 /********************************/
   /* _____START NAV______ */
@@ -171,9 +177,93 @@ header .wrapper { /*Decides where nav items lay on the page*/
     float: right;
 }
 
-/*CONTACT END, FOOTER STYLE START*/ 
+/*INTRO COLUMN START */
 
-footer {
+.column {
+  float: left;
+  width: 55%; /* This creates equal columns that float next to each other */
+  padding-top: 5px;
+  margin-left: 30px;
+}
+
+.column ul li {
+  padding-top: 5px;
+  margin-left: 50px;
+  font-family: 'mada', sans-serif;
+}
+
+.column-img {
+  float: left;
+  width: 33.33%; /* This creates equal columns that float next to each other */
+  padding-top: 50px;
+  margin-left: 40px;
+  margin-right: 50px;
+  height: auto;
+}
+
+/* Clear floats after the columns */
+.row::after {
+  content:"";
+  display: flex;
+  clear: both;
+}
+
+/* Solid border copied from W3 schools and altered */
+hr.solid {
+  border-top: 2px solid rgb(238, 238, 238);
+  margin-top: 30px;
+  width: 95%;
+} 
+
+/* INTRO END. SERVICES COLUMN START */
+
+.servicescolumn {
+  float: left;
+  width: 33.33%; /* This creates equal columns that float next to each other */
+  padding-top: 15px;
+  padding-left: 50px;
+  padding-bottom: 25px;
+  padding-right: 50px;
+}
+
+.servicescolumn figcaption{
+  width:auto; /* This creates equal columns that float next to each other */
+  padding-left: 10px;
+  text-align: left;
+  padding-right: 10px;
+  font-family: 'Lato', sans-serif;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 500px) {
+  .servicescolumn, .servicescolumn-imgs, figcaption {
+    width: 100%;
+  }
+}
+
+.column2 { /*Our Services Titles*/
+  float: left;
+  width: 95%; /* This creates equal columns that float next to each other */
+  padding-top: 1px;
+  margin-left: 20px;
+}
+
+.column2, figcaption { /*Caption titles */
+  float: left; 
+  width: 95%; /* This creates equal columns that float next to each other */
+  padding-left: 1px;
+  font-family: 'Lato', sans-serif;
+}
+
+/* Clear floats after the columns */
+.servicesrow ::after {
+  content:"";
+  display: flex;
+  clear: both;
+}
+/* OUR SERVICES END*/
+
+   footer {
       background: #686f48;
       width: 100%;
       color: #fff;
@@ -241,13 +331,6 @@ display: block;
 .footer-menu ul li a:hover{
   color: #686f48;
 }
-
-@media screen and (max-width: 600px) {
-  .footer, .footer-menu, .footer-bottom [type=submit] {
-    width: 100%;
-    margin-top: 0;
-  }
-}
 }
 
     </style>
@@ -274,61 +357,112 @@ display: block;
 
 <!-- HEADER PHOTO-->
     <div id="headerphoto">
-        <img src="images/loggercutting.png"></a> <!--Photo sourced from Integrated Operations Group-->
+        <img src="images/loggercutting.png"></a> <!--Photo obtained from Unsplashed at https://unsplash.com/photos/b-enaI7JBQ0-->
     </div>
 <!--HEADER PHOTO END-->
 
     <main>
-        <h2>Header 2</h2>
-    <p> <b> Below we'll be critiquing the <a href="https://ascentphysiotherapy.com/news.html" style="color: rgb(0, 0, 0);">Ascent Physiotherapy Website. </a> </b></p>
-        
-        <h3> Header 3</h3>
-        Text goes here.
-        
-        <figure> <img src="images/1.png" alt="Figure 1. Landing page and navigation bar for Ascent Physiotherapy" width="500">
-        <figcaption><b> Figure 1. Caption. </b></figcaption></figure>  <!-- main page photo with figure caption-->
+ <!-- About Us Section-->
+    <div class="row">
+      <div class="column" style="background-color:rgb(255, 255, 255);">
 
-        <h3>Header 3</h3>
-        </p> Paragraph goes here. </p>
-        
-        <figure>
-        <img src="images/2.png"
-        alt="Figure 2. Stand alone landing page block."
-        width="500">
-        <figcaption><b> Figure 2. Caption goes here. </b></figcaption></figure>
+        <h2>Professional Forestry Services</h2>
+        <h3>Snap & Fly Harvesting</h3>
 
-        <h3>Header 3.1</h3>
-    <p> Paragraph goes here.</p>
-        
-        <figure>
-        <img src="images/4.png"
-        alt="Figure 3. Stand alone landing page block."
-        width="500">
-        <figcaption><b> Figure 3. Caption goes here. </b></figcaption></figure>
-    
-     <h3>Conclusion</h3> 
-     <p class="conclusion"> Paragraph goes here. </p>
+        <p>Have some timber that you’re unsure of how to access? Have a private parcel that you’d like to harvest, but don’t know where to start? 
+          </strong>Contact us to learn more about how we can help.  </strong>
+
+          <br><br>
+          Cut from a foundation of helicopter logging and standing-stem; recovering steep, remote, and constrained timber is our speciality. 
+          We can manage each step of the process from feasibility analysis, layout and permitting, right through to harvesting, delivery and sales, along with:
+          <ul>
+          <li>Project Management</li>
+          <li> Feasibility analysis</li>
+          <li>Strategic planning</li>
+          <li>Log sales/marketing</li>
+          <li>Planning & Permitting</li>
+          <li>Reconnaissance</li>
+          <li>Forest engineering, layout and field marking</li>
+          <li>Site-plans and permitting</li>
+          <li>GIS, mapping and data-management</li>
+          <li>Cruising and appraisals</li>
+          <li>Harvesting Operations</li>
+          <li>Heli-logging</li>
+          <li>Forestry tree climbing</li>
+          <li>Hand falling</li>
+          <li>Climbing and jigging to support standing-stem operations</li>
+          <li>Conventional ground-based logging</li>
+          <li>Helicopter pad building</li>
+          <li>& more.</li>
+        </ul>
+        </p>
+      </div>
+      <div class="column-img">
+        <a href="services.html"> <img src="images/4.png" alt="Utilities" width="700"  type="png-photo"></a>
+      </div>
+    </div>    
+
+   <hr class="solid"> 
+<!-- Other Services Section -->
+
+  <div class="row2">
+    <div class="column2">
+    <h3>Other Services</h3>
+          <p>Maintaining a healthy residual forest is key to any new development. 
+            Windfirming and tending to these forest edges can be a key treatment in maintaining aesthetics 
+            and more importantly, avoiding windthrow events during storm cycles. In many ways, windfirming 
+            is one of the cornerstones of our tree climbing division.
+            <br><br>
+          </p>
+        </div>
+  </div>
+
+    <!--Services Photo Section-->
+
+    <div class="servicesrow">
+      <div class="servicescolumn" style="background-color:rgb(255, 255, 255);">
+        <a href="services.html"> <img src="images/urban forestry.png" alt="Urban Forestry" width="400" type="png-photo"></a>
+        <figcaption> Whether you’ve got trees that are dead, too big, obscuring your view or simply require some maintenance, 
+          we can help. Our climbers and fallers are fully qualified and insured so you can have the confidence the job will be done 
+          efficiently and safely. </figcaption>
+      </div>
+      <div class="servicescolumn" style="background-color:rgb(255, 255, 255);">
+        <a href="services.html"> <img src="images/utilities.png" alt="Utilities" width="400" type="png-photo"></a>
+        <figcaption> Our team has significant experience in nearly every phase of managing vegetation around utilities. 
+          From initial right-of-way layout, clearing plans and permitting through to tree falling, pruning and hazard tree removal, 
+          we have the skills and training to get the job done safely and efficiently.</figcaption>
+      </div>
+      <div class="servicescolumn" style="background-color:rgb(255, 255, 255);">
+        <a href="services.html"> <img src="images/windfarming.png" alt="Wind Farming" width="400" type="png-photo"></a>
+        <figcaption>  In many ways, windfirming is one of the cornerstones of our tree climbing division. 
+          IOG’s combined experience includes hundreds of kilometers of windfirming along forest edges across 
+          BC’s coast through both urban and commercial forestry settings.</figcaption>
+      </div>
+    </div>
+
+      <hr class="solid"> 
 
 </main>
+
 <!--FOOTER-->
 <footer>
-    <div class="footer-content"> <!-- wraps the content so that the background colour can spread from edge to edge of the browser window -->
-        <p><em>This is a fictional website that was designed and coded as an educational exercise. 
-            It is not intended to be seen outside of the class environment. 
-            None of the content and images were approved by the business owner. </em></p></div> 
-            
-    <div class="footer-bottom">
-        <h3>Copyright &copy; Shayla Auld 2021</h3>
-    </div>           
+  <div class="footer-content"> <!-- wraps the content so that the background colour can spread from edge to edge of the browser window -->
+      <p><em>This is a fictional website that was designed and coded as an educational exercise. 
+          It is not intended to be seen outside of the class environment. 
+          None of the content and images were approved by the business owner. </em></p></div> 
+          
+  <div class="footer-bottom">
+      <h4>Copyright &copy; Shayla Auld 2021</h4>
+  </div>           
 
-    <div class="footer-menu">
-        <ul>
-           <li><a href="home.html">Home</a></li>
-           <li><a href="about.html">About</a></li>
-           <li><a href="services.html">Services</a></li>
-           <li><a href="contact.html">Contact</a></li>
-        </ul>
-       </div>
+  <div class="footer-menu">
+      <ul>
+         <li><a href="home.html">Home</a></li>
+         <li><a href="about.html">About</a></li>
+         <li><a href="services.html">Services</a></li>
+         <li><a href="contact.html">Contact</a></li>
+      </ul>
+     </div>
 
   </footer>
 </body>
