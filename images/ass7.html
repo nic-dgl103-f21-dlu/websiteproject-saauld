@@ -1,0 +1,304 @@
+<!DOCTYPE html> <!--DOCTYPE and html added-->
+<html lang="en">
+
+<head>
+  <!-- DGL 103 DLU1 - Shayla Auld - Assignment 6 -->
+  <title>Shayla's Assignment 7</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="ass7.css"> <!--CSS stylesheet linked-->
+  <link rel="icon" href="favicon.ico" type="image/x-icon"> 
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      color: #191645;
+    }
+
+    header {
+      padding: 15px;
+      width: 1000px; /* centers the content and gives it negative space on either side */
+      margin: auto;
+      display: flex; /* the flex-container for the logo and the heading (the flex-items) makes the flex-items sit side by side */
+      align-items: center; /* positions the flex items at the center of the cross axis (vertical) */
+    }
+
+    h1 {
+      margin-left: 20px; /* Adds a little space between the logo and the heading */
+      font-size: 35px; /* font sizes added for headers */
+    }
+
+    h2 {
+        font-size: 25px;
+    }
+
+    /* start navigation */
+
+  nav {
+      background-color: #f3f3f4; /*nav colour added */
+    }
+
+  nav .wrapper {
+    width: 1000px;
+    margin: auto;
+    padding: 0 15px;
+  }
+  nav ul {
+    display: flex; /* the flex-container for the list items makes the flex-items sit side by side */
+    justify-content: space-between; /* spreads the flex-items starting at the start and end of the main axis */
+    list-style-type: none; /* removes the list bullets */
+    margin: 0;
+    padding: 0;
+  }
+
+  nav li a:hover { 
+    background-color: #e4ae5d;
+    color: white
+  }
+  
+  nav li a { 
+    padding: 15px;
+    display: inline-block; /* an anchor is an inline element so it has no box model vertical measurements, this makes the anchor behave like a block element that sits inline like an inline element */
+    text-decoration: none;
+    color: #191645;
+  }
+
+  /* end navigation */
+
+  main { /* centers the content and gives it negative space on either side */
+  padding: 15px;
+  width: 1000px;
+  margin: auto;
+  display: flex; /* the flex-container for article and aside (the flex items) makes the flex items sit side by side */
+  }
+
+  figure {
+    margin: 0; /* resets the default figure margin, applies to both the image in the article and the aside */
+  }
+
+  figcaption {
+    color: grey;
+  }
+ /* Left side article start */
+
+  article {
+    margin-right: 30px; /* adds a little space between the article and the aside */
+    flex-basis: 0; /* resets the default width of the flex-item to 0 */
+    flex-grow: 2; /* grows the width of the flex item so that it is 2/3s of the container, 2+1=3 */
+  }
+  
+  article img {
+    width: 70%; /* makes the image the full width of its parent element */
+  }
+
+  /* Left side end. Right side column start */ 
+  aside {
+    border: 1px solid #c8c8c9;
+    padding: 15px;
+    font-weight: lighter;
+    flex-basis: 0; /* resets the default width of the flex item to 0 */
+    flex-grow: 3; /* grows the width of the flex item so that it is one third of the container, 2+1=3 */
+    display: flex; /* the flex container for the aside content makes the flex items sit side by side */
+    flex-wrap: wrap; /* makes the flex items sit one below the other */
+    align-content: space-between; /* spreads the flex items evenly starting at the start and end of the cross axis */
+  }
+    
+  /* Right side column end. Start footer */ 
+
+    footer {
+      background-color: #191645;
+      color: white;
+      height: 80px;
+      padding-top: 30px;
+      padding-left: 140px;
+    }
+
+    footer.wrapper {
+      width: 800px;
+      margin: 100px;
+      padding: 15px;
+    }
+ /* End footer */
+
+</style>
+</head> 
+
+<body>
+    <header> 
+      <a href="index.html"><img src="images/digital-logo.png" alt="Communication & Design Program" width="100"></a>
+      <h1> Communication & Design Diploma</h1>
+    </header>
+    <nav>
+        <div class="wrapper"> <!-- Wraps the content so that the background colour can spread from edge to edge of the browser window -->
+          <ul> <!-- Using a list for navigation items is the correct semantic way to format them -->
+            <li><a  href="index.html">Assignment 1</a></li>
+            <li><a  href="ass2.html">Assignment 2</a></li>
+            <li><a  href="ass3.html">Assignment 3</a></li>
+            <li><a  href="ass4.html">Assignment 4</a></li>
+            <li><a  href="ass5.html">Assignment 5</a></li>
+            <li><a  href="ass6.html">Assignment 6</a></li>
+            <li><a  href="ass7.html">Assignment 7</a></li> <!--New assignment added-->
+
+          </ul>
+        </div>
+    </nav>
+
+    <main>
+      <article>  
+         <h2>Contact Us</h2>
+        <p> NIC has excellent staff, faculty, and student services to help you meet your goals. </p>
+            <div> <!--space divider--> </div>
+            <p>Use our form below to get in touch with us, ask questions, provide feedback, or learn
+             how you can take part in our Communication & Design program:</p> <!--New paragraph info-->
+
+            <!-- Left side Form Wrapper Start-->
+            <div class="wrapper-form">
+                <form method="post" action="https://learndigital.dev/programs/dgl103-form.php">
+                  <label for="fname">First Name<span class="label-required"> * </span></label>
+                  <input type="text" id="fname" name="firstname" placeholder="Ex: Jane">
+              
+                  <label for="lname">Last Name<span class="label-required"> * </span></label>
+                  <input type="text" id="lname" name="lastname" placeholder="Ex: Doe">
+              
+                  <label for="email">Email <span class="label-required"> * </span></label>
+                  <input type="email" id="email" name="email" placeholder="Ex: jane@gmail.com" required>
+
+                  <label for="tel">Phone Number </label>
+                  <input type="tel" id="tel" name="tel" placeholder="Ex: 555-555-5555">
+
+                  <label for="city">City </label>
+                  <input type="text" id="city" name="city" placeholder="Ex: Campbell River">
+
+                  <label for="country">Country </label>
+                  <input type="text" id="country" name="country" placeholder="Ex: Canada">
+              
+                  <label for="stream">Stream of Interest</label>
+                  <select id="stream" name="stream">
+                    <option value="design and development">Design & Development</option>
+                    <option value="design and media">Design & Media</option>
+                  </select>
+              
+                  <fieldset>
+                    <legend>Choose how you would prefer to be contacted:</legend>
+                    <input type="radio" id="Phone" name="phone" value="Phone">
+                    <label for="phone">Phone</label><br>
+
+                    <input type="radio" id="email" name="email" value="Email"> <!--W3 error with 'email duplication'-->
+                    <label for="email">Email</label><br>
+
+                    <input type="radio" id="text" name="text" value="Text">
+                    <label for="text">Text</label>
+                  </fieldset>
+              
+                  <label for="message">Message</label>
+                  <textarea id="message" name="message" placeholder="What can we help you with?" style="height:150px"></textarea>
+              
+                  <div class="wrapper-button">
+                    <input type="reset" value="Reset">
+                    <input type="submit" value="Submit">
+                  </div>
+                </form>
+            </div>
+        </article>
+              <!--Form End-->
+
+
+    <!--Right Side Table Start-->
+    <aside> 
+          <div> <!-- Wraps the content at the top of the aside in a div to group it as one flex item -->
+          <figure>
+            <img src="images/comms-nic.png" alt="Matthew Boucher, North Island College Communications & Design Graduate" width="700"> <!--Added photos, changed alt text-->
+            <figcaption><i> Photo retrieved from NIC's Communications Design Diploma Gallery.</i></figcaption>
+          </figure></div>
+
+          <!--Caption for Figure 1:-->
+          <p> Our graduates have a wide range of success stories for you to learn about. 
+            Learn more about our alumni graduates like Matthew, in our Gallery below: </p>
+            <form action="https://www.nic.bc.ca/programs/business-applied-studies/digital-design-development/communication-design-diploma/">
+                <button type="submit">Visit NIC's Alumni Gallery </button>
+              </form>
+          
+          <!-- <div class="wrapper">, table begins -->
+              <table>
+                   <caption> Year 1 Course Requirements & Timetable: 2021-2022</caption>
+                   <thead> 
+
+    <tr> <!--6 Rows for DGL Classes-->
+      <th> DGL 101</th>
+      <th> DGL 102</th>
+      <th> DGL 103</th>
+      <th> DGL 105</th>
+      <th> DGL 111</th>
+      <th> DGL 113</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr> <!--4 Columns With Available class times for each course-->
+      <td>Wed 1-3</td>
+      <td>Mon 5-7</td>
+      <td>Tue 11-1</td>
+      <td>Wed 1-3</td>
+      <td>Fri 12-1</td>
+      <td>Fri 1-2</td>
+    </tr>
+
+    <tr>
+        <td>Tues 1-3</td>
+        <td>Mon 4-6</td>
+        <td>Tue 9-10</td>
+        <td>Wed 1-3</td>
+        <td>Tue 1-4</td>
+        <td>Fri 9-12</td>
+    </tr>
+
+    <tr>
+        <td>Mon 1-3 </td>
+        <td>Thurs 2-3</td>
+        <td>Fri 12-2</td>
+        <td>Thurs 4-6</td>
+        <td>Fri 12-1</td>
+        <td>Mon 10-11</td>
+    </tr>
+
+    <tr>
+      <td>Fri 10-2</td>
+      <td colspan="6" class="merge">--- Classes not yet available ---</td>
+    </tr>
+
+  </tbody>
+  <tfoot>
+    <tr>
+      <td colspan="6">All information up to date as of Nov 18, 2021</td>
+    </tr>
+  </tfoot>
+</table>
+
+<figure>
+    <br>
+    <img src="images/people-g34a9f551b_1280.jpg" alt="NIC Students" width="700">
+    <figcaption><i>Join one of our on-campus activities happening this year.</i></figcaption> <!--Figcaption and photos added added; -->
+    <p>Connect with like-minded students by getting involved with a some of our on-campus activities 
+     and events this year! This November, check out our International Education Week Series, 
+     join our International Student Panel, or take part in our virtual Adventour Scavenger Hunt.</p>
+
+<p><b>Learn more, here:</b></p> <!--Subheader-->
+<form action="https://www.nic.bc.ca/student-life-support-services/student-life/event-calendar/"> <!--Event calendar button-->
+    <button type="submit">Visit NIC's Event Calendar</button>
+  </form>
+</figure>
+</aside>
+
+    </main>
+    <footer>
+      <div class="wrapper"> <!-- wraps the content so that the background colour can spread from edge to edge of the browser window -->
+        DGL 103 HTML/CSS Assignment 6
+      </div> 
+    </footer>
+</body>
+
+</html>

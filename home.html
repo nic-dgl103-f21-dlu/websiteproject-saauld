@@ -25,19 +25,16 @@
       text-align: left;
       margin-left: 100px; /* Adds a little space between the logo and the heading */
       margin-right: 800px;
-      font-size: 35px; /* font sizes added for headers */
     }
 
-    h1 {
+    h1 { /*Affects 'The highest producer of single-stem harvesting in North America' text*/
       font-size: 2rem;
-      margin-top: 350px;
+      margin-top: 300px;
       font-family: 'Lato', sans-serif;
-      font-weight: bold;
     }
 
     h2 {
         font-family: sans-serif;
-        font-weight: bold;
         margin-top: 20px;
         font-size: 1rem;
     } /* Mission Statement Text End*/
@@ -50,6 +47,12 @@
 
     h4 {
       font-family: 'Mada', sans-serif;
+    }
+
+    h5 {
+      font-family: 'Lato', sans-serif;
+      font-size: 20px;
+      margin-top: 50px;
     }
 
 /********************************/
@@ -120,7 +123,7 @@ header { /*Home, About, Services, Contact, & Social Icons Styling */
 header .wrapper { /*Decides where nav items lay on the page*/
     width: 1000px;
     margin: auto;
-    padding: 0 30px; /*accidentially clicked something to make this go red*/ 
+    padding: 0 30px; /*Accidentially clicked something to make this (and all 30px) go red across all pages, not sure how to correct it!*/ 
   }
   
 /******************************/
@@ -245,42 +248,50 @@ iframe.center {
 
 /* YOUTUBE END */
 
-/* /////CONTACT BAR START ////// RESUME ////// */
+/* /////CONTACT US SECTION START ////// RESUME ////// */
 
 input[type=text], select, textarea {
   width: 100%;
   padding: 12px;
   border: 1px solid #ccc;
   margin-top: 6px;
-  margin-bottom: 16px;
+  margin-bottom: 5px;
   resize: vertical;
+  font-family: 'Mada', sans-serif;
 }
 
 input[type=submit] {
-  background-color: #04AA6D;
+  background-color: #686f48;
   color: white;
-  padding: 12px 20px;
+  padding: 12px 10px;
   border: none;
   cursor: pointer;
+  font-family: 'Mada', sans-serif;
 }
 
 input[type=submit]:hover {
-  background-color: #45a049;
+  background-color: #3f3f3f;
+  font-family: 'Mada', sans-serif;
 }
 
 /* Style the container/contact section */
-.container2 {
+.wrapperform { /* Affects 'How Can We Help? paragraph' */
   border-radius: 5px;
   background-color: #f2f2f2;
   padding: 10px;
+  font-family: 'Lato', sans-serif;
+  font-size: 18px;
 }
 
 /* Create two columns that float next to eachother */
 .column2 {
-  float: left;
+  float: center;
   width: 50%;
-  margin-top: 6px;
-  padding: 20px;
+  margin-top: 8px;
+  margin-left: 350px;
+  padding: 50px;
+  margin-bottom: 10px;
+  font-family: 'Mada', sans-serif;
 }
 
 /* Clear floats after the columns */
@@ -288,11 +299,12 @@ input[type=submit]:hover {
   content: "";
   display: table;
   clear: both;
+  font-family: 'Mada', sans-serif;
 }
 
 /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
-  .column, input[type=submit] {
+  .column2, input[type=submit] {
     width: 100%;
     margin-top: 0;
   }
@@ -303,28 +315,20 @@ input[type=submit]:hover {
     footer {
       background: #686f48;
       width: 100%;
-      margin-top: 50px;
       color: #fff;
     }
 
-    footer.content { 
+    .footer-content { 
       display: flex;
       align-items: center;
       justify-content: center;
-    }
-
-    .footer-content h3{ /*footer IOG title styling */
-        font-size: 2.1rem;
-        font-weight: 1000;
-        line-height: 3rem;
-        text-align: center;
-        margin-top:50px;
+      margin-top: 50px;
     }
 
     .footer-content p{ /*footer disclaimerparagraph text */ 
         max-width: 500px;
         margin: 10px auto;
-        margin-top: 0px;
+        margin-top: 20px;
         line-height: 28px;
         font-size: 16px;
         color: #f4f4f4;
@@ -337,22 +341,21 @@ input[type=submit]:hover {
     width: 100%;
     padding: 10px;
     padding-bottom: 10px;
-    text-align: left;
-    font-family: 'Mato', sans-serif;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
 }
 
 .footer-bottom p{
    float: left center;
    font-size: 14px;
 }
-.footer-bottom p a{
-  font-size: 16px;
-}
+
 .footer-bottom span{ /*Copyright info end*/
     opacity: .4;
     font-weight: 200;
 }
 
+/*right side nav bar start*/
 .footer-menu{
   float: right;
 }
@@ -366,12 +369,11 @@ padding-right: 10px;
 display: block;
 }
 
-.footer-menu ul li a{ /*right side nav bar*/
+.footer-menu ul li a{ 
   color: #000000;
   text-decoration: none;
   font-family: 'Mada', sans-serif;
   font-weight: 100px;
-  font-weight: 500;
   font-size: smaller;
 }
 
@@ -452,29 +454,37 @@ display: block;
 </div>
 
 <!-- CONTACT SECTION -->
-<div class="container2">
+<div class="wrapper-form">
   <div style="text-align:center">
-    <h2>Contact Us</h2>
-    <p>Swing by for a cup of coffee, or leave us a message:</p>
+    <h5>How can we help?</h5>
   </div>
   <div class="row2">
     <div class="column2">
-      <img src="/w3images/map.jpg" style="width:100%">
-    </div>
-    <div class="column2">
-      <form action="/action_page.php">
+      <form method="post" action="https://www.integratedops.com">
         <label for="fname">First Name</label>
-        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+        <input type="text" id="fname" name="firstname" placeholder="Your name">
         <label for="lname">Last Name</label>
-        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-        <label for="country">Country</label>
-        <select id="country" name="country">
-          <option value="australia">Australia</option>
-          <option value="canada">Canada</option>
-          <option value="usa">USA</option>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name">
+        <label for="province">Province</label>
+        <select id="province" name="province">
+          <option value="BC">British Columbia</option>
+          <option value="AB">Alberta</option>
+          <option value="MN">Manitoba</option>
+          <option value="NB">New Brunswick</option>
+          <option value="NFL">Newfoundland & Labrador</option>
+          <option value="NS">Nova Scotia</option>
+          <option value="QB">Quebec</option>
+          <option value="ON">Ontario</option>
+          <option value="PEI">Prince Edward Island</option>
+          <option value="SK">Saskatchewan</option>
+          <option value="NT">Northwest Territories</option>
+          <option value="NV">Nunavut</option>
+          <option value="YK">Yukon</option>
         </select>
-        <label for="subject">Subject</label>
-        <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+        <label for="Business">Business Name</label>
+        <input type="text" id="business" name="business" placeholder="Your business or organization">
+        <label for="subject">Message</label>
+        <textarea id="subject" name="subject" placeholder="Write something..." style="height:170px"></textarea>
         <input type="submit" value="Submit">
       </form>
     </div>
