@@ -89,7 +89,7 @@
   float: left;
   font-size: 2em;
   padding-left: 100px;
-  padding: 10 40 10 10px;
+  padding: 10px;
   text-decoration: none;
 }
 
@@ -242,7 +242,7 @@ hr.solid {
 /*MISSION/VISION COLUMNS START */
 
 .column3 {
-  float: center;
+  float: left;
   width: 95%; /* This creates equal columns that float next to each other */
   padding-top: 5px;
   padding-left: 50px;
@@ -299,7 +299,7 @@ hr.solid {
 }
 
 .footer-bottom p{
-   float: left center;
+   float: left;
    font-size: 14px;
 }
 
@@ -326,7 +326,7 @@ display: block;
   color: #000000;
   text-decoration: none;
   font-family: 'Mada', sans-serif;
-  font-weight: 100px;
+  font-weight:100;
   font-size: smaller;
 }
 

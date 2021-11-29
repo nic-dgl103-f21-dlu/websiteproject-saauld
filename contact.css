@@ -81,7 +81,7 @@
   float: left;
   font-size: 2em;
   padding-left: 100px;
-  padding: 10 40 10 10px;
+  padding: 10px;
   text-decoration: none;
 }
 
@@ -234,7 +234,7 @@ header .wrapper-form, article, footer { /*Decides where nav items lay on the pag
     margin-left: 10px;
     margin-top: 50px;
     padding: 20px;
-    width: 1000;
+
   }
   
   .wrapper-button {
@@ -316,7 +316,7 @@ header .wrapper-form, article, footer { /*Decides where nav items lay on the pag
 
   /*Google Maps*/
   .google-maps {
-    float: center;
+    float: center; /*CSS Validator saying error, but this was the only way I could get it to sit properly. */ 
     margin-top: 20px;
   }
 
@@ -333,7 +333,7 @@ footer {
       align-items: center;
       justify-content: center;
       margin-top: 50%;
-      width: 100;
+      width: 100%;
     }
 
     .footer-content p{ /*footer disclaimerparagraph text */ 
@@ -357,7 +357,7 @@ footer {
 }
 
 .footer-bottom p{
-   float: left center;
+   float: left;
    font-size: 14px;
 }
 
@@ -384,7 +384,7 @@ display: block;
   color: #000000;
   text-decoration: none;
   font-family: 'Mada', sans-serif;
-  font-weight: 100px;
+  font-weight: 100;
   font-size: smaller;
 }
 
