@@ -3,7 +3,7 @@
 
 <head>
     <!-- DGL 103 DLU1 - Shayla Auld - Integrated Operations Group Website -->
-    <title>About - Integrated Operations Group</title>
+    <title>About | Integrated Operations Group</title>
     <meta charset="utf-8">
     <link rel="icon" href="images/icon.png" type="images/icon.png"> <!--IOG Icon appears in tab-->
     <style>
@@ -29,10 +29,18 @@
         font-family: 'Lato', sans-serif;
         font-weight: bold;
         font-size: 50px;
-        margin-left: 50px;
+        margin-left: 15px;
     }
 
     h3 {
+        font-family: 'Lato', sans-serif;
+        font-size: 35px;
+        margin-left: 20px;
+        font-weight: bold;
+    }
+
+
+    h4 {
         font-family: 'Lato', sans-serif;
         font-size: 14px;
     }
@@ -40,7 +48,8 @@
     p {
         font-family: 'Mada', sans-serif;
         font-size: 16px;
-        margin-left: 50px;
+        margin-left: 20px;
+        margin-right: 50px;
     }
 
 /********************************/
@@ -174,26 +183,96 @@ header .wrapper { /*Decides where nav items lay on the page*/
   float: left;
   width: 55%; /* This creates equal columns that float next to each other */
   padding-top: 5px;
-  padding-left: 50px;
+  margin-left: 30px;
 }
 
 .column-img {
   float: right;
   width: 33.33%; /* This creates equal columns that float next to each other */
-  padding-top: 50px;
-  margin-left: 50px;
+  padding-top: 20px;
+  margin-left: 40px;
+  height: fit-content;
 }
 
 /* Clear floats after the columns */
-.row:after {
-  content:url();
-  display: table;
+.row::after {
+  content:"";
+  display: flex;
   clear: both;
 }
 
-/* OUR STORY COLUMN END */ 
+/* Solid border copied from W3 schools and altered */
+hr.solid {
+  border-top: 2px solid rgb(219, 219, 219);
+  margin-top: 30px;
+  width: 95%;
+} 
 
-   /*FOOTER STYLE START*/ 
+/*OUR TEAM COLUMN START */
+
+.teamcolumn {
+  float: left;
+  width: 33.33%; /* This creates equal columns that float next to each other */
+  padding-top: 15px;
+  padding-left: 50px;
+  padding-bottom: 25px;
+  padding-right: 50px;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 500px) {
+  .teamcolumn, .teamcolumn-imgs {
+    width: 100%;
+  }
+}
+
+.column2 { /*Our Team Titles*/
+  float: left;
+  width: 95%; /* This creates equal columns that float next to each other */
+  padding-top: 1px;
+  margin-left: 20px;
+}
+
+.column2, figcaption { /*Job titles */
+  float: left; 
+  width: 95%; /* This creates equal columns that float next to each other */
+  padding-left: 1px;
+  font-family: 'Lato', sans-serif;
+}
+
+/* Clear floats after the columns */
+.teamrow ::after {
+  content:"";
+  display: flex;
+  clear: both;
+}
+/* OUR TEAM END*/
+
+/*MISSION/VISION COLUMNS START */
+
+.column3 {
+  float: center;
+  width: 95%; /* This creates equal columns that float next to each other */
+  padding-top: 5px;
+  padding-left: 50px;
+}
+
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 500px) {
+  .column3, .column-imgs {
+    width: 100%;
+  }
+}
+
+/* Clear floats after the columns */
+.column3::after {
+  content:"";
+  display: flex;
+  clear: both;
+}
+
+   /*MISSION/ VISION FOOTER STYLE END*/ 
 
    footer {
       background: #686f48;
@@ -263,13 +342,6 @@ display: block;
 .footer-menu ul li a:hover{
   color: #686f48;
 }
-
-@media screen and (max-width: 600px) {
-  .footer, .footer-menu, .footer-bottom [type=submit] {
-    width: 100%;
-    margin-top: 0;
-  }
-}
 }
 
     </style>
@@ -301,46 +373,78 @@ display: block;
 <!--HEADER PHOTO END-->
 
     <main>
-
+ <!-- About Us Section-->
     <div class="row">
       <div class="column" style="background-color:rgb(255, 255, 255);">
         <h2>About Us</h2>
         <p>IOG is a SAFE Certified company based out of Campbell River and Duncan on Vancouver Island. 
           The company was created to provide clients with full-phase or “ribbon-to-water” 
-          resource management and development solutions. Our speciality is extracting hidden value from 
+          resource management and development solutions. 
+          <br><br>
+          Our speciality is extracting hidden value from 
           development projects while maintaining focus on regulatory requirements and social and environmental responsibilities.</p>
       </div>
       <div class="column-img">
-        <a href="services.html"> <img src="images/iogphoto4.jpeg" alt="Utilities" width="400"  type="png-photo"></a>
+        <a href="services.html"> <img src="images/4.png" alt="Utilities" width="400"  type="png-photo"></a>
       </div>
     </div>    
 
-        <h3> Header 3</h3>
-        <p>Text goes here. </p>
-        
-        <figure> <img src="images/1.png" alt="Figure 1. Landing page and navigation bar for Ascent Physiotherapy" width="500">
-        <figcaption><p> Figure 1. Caption. </p></figcaption></figure>  <!-- main page photo with figure caption-->
+   <hr class="solid"> 
+<!-- Our Team Section -->
 
-        <h3>Header 3</h3>
-        </p> Paragraph goes here. </p>
-        
-        <figure>
-        <img src="images/2.png"
-        alt="Figure 2. Stand alone landing page block."
-        width="500">
-        <figcaption><p> Figure 2. Caption goes here. </p></figcaption></figure>
+  <div class="row2">
+    <div class="column2">
+    <h3>Our Team</h3>
+          <p>OG constructs its project teams based on the unique needs and challenges of each project. 
+          Our team consists of <em>Registered Professional Foresters, ISA Certified Arborists, BCFSC Certified Fallers, 
+          Qualified Tree Climbers, Danger Tree Assessors</em> and other professionals.</p>
+        </div>
+  </div>
 
-        <h3>Header 3.1</h3>
-    <p> Paragraph goes here.</p>
-        
-        <figure>
-        <img src="images/4.png"
-        alt="Figure 3. Stand alone landing page block."
-        width="500">
-        <figcaption><p> Figure 3. Caption goes here. </p></figcaption></figure>
-    
-     <h3>Conclusion</h3> 
-     <p class="conclusion"> Paragraph goes here. </p>
+    <!--Team Photos-->
+      <div class="teamrow">
+        <div class="teamcolumn">
+          <div class="circular_image">
+          <img src="images/shawn.png" alt="Shawn Mandula, RPF, ISA Certified Arborist, Managing Partner" style="width:100%" ></div>
+          <figcaption>Shawn Mandula, RPF, ISA Certified Arborist: <em>Managing Partner, Operations Manager</em></figcaption>
+        </div>
+      <div class="teamcolumn">
+          <div class="circular_image">
+          <img src="images/Crispin.png" alt="Crispin Coppock, BCFSC Certified Tree Climber, Managing Partner" style="width:100%" ></div>
+          <figcaption>Crispin Coppock, BCFSC Certified Faller/ Tree Climber: <em>Managing Partner, Project Manager</em></figcaption>
+        </div>
+    <div class="teamrow">
+        <div class="teamcolumn">
+          <div class="circular_image">
+          <img src="images/Sig.png" alt="Sig Kemmler, BCFSC Certified Faller, Managing Partner" style="width:100%" ></div>
+          <figcaption>Sig Kemmler, BCFSC Certified Faller: <em>Managing Partner, Ground-Based Logging Manager</em></figcaption>
+         </div>
+       </div>
+    </div>
+
+      <hr class="solid"> 
+
+      <!-- Mission & Vision -->
+      <div class="row3">
+        <div class="column3" style="background-color:rgb(255, 255, 255);">
+          <h3>Our Mission</h3>
+          <p>Integrated Operations Group (IOG) is a SAFE Certified company based out of Campbell River and Duncan, British Columbia. 
+            Our company was created with the mission to offer full-phase resource management and development solutions
+            to Vancouver Island and beyond. </p>
+        </div>
+
+        <div class="column3">
+          <h3>Our Specialty</h3>
+          <p>We specialize in extracting hidden value from development projects, while maintaining focus on our
+            social and environmental responsibilities as an organization. 
+            <br>
+            <br>
+            IOG considers itself an industry leader in 
+            forest management, harvesting/yarding, and tree hazard mitigation and abatement across the forest and resource sectors. 
+            In addition to having some of the most experienced fallers, tree climbers and harvesting specialists available on the coast, 
+            we employ Registered Professional Foresters, ISA Certified Arborists, Professional Biologists and other resource professionals.</p>
+        </div>
+      </div>    
 
 </main>
 
@@ -352,7 +456,7 @@ display: block;
           None of the content and images were approved by the business owner. </em></p></div> 
           
   <div class="footer-bottom">
-      <h3>Copyright &copy; Shayla Auld 2021</h3>
+      <h4>Copyright &copy; Shayla Auld 2021</h4>
   </div>           
 
   <div class="footer-menu">
