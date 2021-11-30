@@ -81,7 +81,7 @@
   float: left;
   font-size: 2em;
   padding-left: 100px;
-  padding: 10px;
+  padding: 10px 40px 10px 10px;
   text-decoration: none;
 }
 
@@ -165,7 +165,7 @@ header .wrapper-form, article, footer { /*Decides where nav items lay on the pag
     box-sizing: border-box;
   }
   
-  /* Start responsive nav for medium devices using Claire's codepen, then adjusted (landscape tablets, 768px and up) */
+  /* Start responsive nav for medium devices inspired by Claire's codepen then adjusted (landscape tablets, 768px and up) */
   @media only screen and (min-width: 768px) {
     .wrapper {
       display: flex;
@@ -185,9 +185,9 @@ header .wrapper-form, article, footer { /*Decides where nav items lay on the pag
     }
   
   }
- /* ===============
-     CONTACT LEFT 
-     =============== */
+ /* ======================
+     CONTACT LEFT SIDE START 
+     ====================== */
  * {
     box-sizing: border-box;
   }
@@ -234,7 +234,7 @@ header .wrapper-form, article, footer { /*Decides where nav items lay on the pag
     margin-left: 10px;
     margin-top: 50px;
     padding: 20px;
-
+    width: 100%;
   }
   
   .wrapper-button {
@@ -316,7 +316,7 @@ header .wrapper-form, article, footer { /*Decides where nav items lay on the pag
 
   /*Google Maps*/
   .google-maps {
-    float: center; /*CSS Validator saying error, but this was the only way I could get it to sit properly. */ 
+    float: center; /*W3C error, only way I could figure out how to align google map center*/
     margin-top: 20px;
   }
 
@@ -351,13 +351,12 @@ footer {
     background: #505538;
     width: 100%;
     padding: 10px;
-    padding-bottom: 10px;
     text-align: center;
     font-family: 'Lato', sans-serif;
 }
 
 .footer-bottom p{
-   float: left;
+   text-align: center;
    font-size: 14px;
 }
 
@@ -384,7 +383,6 @@ display: block;
   color: #000000;
   text-decoration: none;
   font-family: 'Mada', sans-serif;
-  font-weight: 100;
   font-size: smaller;
 }
 

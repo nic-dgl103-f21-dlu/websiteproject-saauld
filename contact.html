@@ -10,27 +10,27 @@
 </head>
 
 <body>
-    <header class="header">
-
+  <header class="header">
      <!--Navigation Menu & Logo-->
       <a href="index.html" class="logo"><img src="images/logo.jpg" ALT="Integrated Operations Group Logo" width="200"></a>
-      <nav> 
-      <div class="wrapper"> <!-- Wraps the content so that the background colour can spread from edge to edge of the browser window -->
+    <nav> 
+    <div class="wrapper"> <!-- Wraps the content so that the background colour can spread from edge to edge of the browser window -->
           <ul class="menu"><!-- Using a list for navigation items is the correct semantic way to format them, REMOVE! -->
             <li><a  href="index.html">Home</a></li>
             <li><a  href="about.html">About</a></li>
             <li><a  href="services.html">Services</a></li>
             <li><a  href="contact.html">Contact</a></li>
-            <a href="https://www.facebook.com/integratedops" class="social-icon" target="blank" title="Integrated Operations Group Facebook"> <img src="images/facebookicon.png"  width="30" alt="Integrated Operations Group Facebook"></a> <!--Facebook icon-->
-            <a href="https://www.instagram.com/integrated_ops/" class="social-icon" target="blank" title="Integrated Operations Group Instagram"> <img src="images/instaicon.png"  width="27" alt="Integrated Operations Group Instagram"></a> <!--Instagram Link-->
-            <a href="https://www.youtube.com/channel/UCMhB4xQXgEWTs90aVFqKBRQ" class="social-icon" target="blank" title="Integrated Operations Group Youtube"> <img src="images/Youtube.png"  width="31" alt="Integrated Operations Group Youtube"></a> <!--Youtube Link-->
+            <a href="https://www.facebook.com/integratedops" class="social-icon" target="blank" title="Integrated Operations Group Facebook"> <img src="images/facebookicon.png"  width="30" alt="Integrated Operations Group Facebook Link"></a> <!--Facebook icon--> <!--W3 error not allowing icons to sit in with nav-->
+            <a href="https://www.instagram.com/integrated_ops/" class="social-icon" target="blank" title="Integrated Operations Group Instagram"> <img src="images/instaicon.png"  width="27" alt="Integrated Operations Group Instagram Link"></a> <!--Instagram Link-->
+            <a href="https://www.youtube.com/channel/UCMhB4xQXgEWTs90aVFqKBRQ" class="social-icon" target="blank" title="Integrated Operations Group Youtube"> <img src="images/Youtube.png"  width="31" alt="Integrated Operations Group Youtube Link"></a> <!--Youtube Link-->
           </ul>
-      </div>
-          </header>
+    </nav>
+    </div>
+  </header>
 
 <!-- HEADER PHOTO-->
     <div id="headerphoto">
-        <img src="images/Top-of-Urban-Forestry-and-Fire-Hazard-Abatement-Page-1200x797.jpeg"></a> <!--Photo obtained from Integrated Operations Group (with permission)-->
+        <img src="images/Top-of-Urban-Forestry-and-Fire-Hazard-Abatement-Page-1200x797.jpeg" alt="Integrated Operations Group Contact Header Header"> <!--Photo obtained from Integrated Operations Group (with permission)-->
     </div>
 <!--HEADER PHOTO END-->
 
@@ -50,7 +50,7 @@
              <input type="text" id="lname" name="lastname" placeholder="Ex: Doe">
          
              <label for="email">Email <span class="label-required"> * </span></label>
-             <input type="email" id="email" name="email" placeholder="Ex: jane@gmail.com" required>
+             <input type="email" id="email" name="email" placeholder="Ex: john@gmail.com" required>
 
              <label for="tel">Phone Number </label>
              <input type="tel" id="tel" name="tel" placeholder="Ex: 555-555-5555">
@@ -71,12 +71,12 @@
              </select>
          
              <fieldset>
-               <legend>Choose how you would prefer to be contacted by:</legend>
+               <legend>Choose how you would prefer to be contacted:</legend>
                <input type="radio" id="Phone" name="phone" value="Phone">
                <label for="phone">Phone</label><br>
 
-               <input type="radio" id="email" name="email" value="Email"> 
-               <label for="email">Email</label><br>
+               <input type="radio" id="email" name="email-choice" value="Email-choice"> 
+               <label for="email-choice">Email</label><br>
 
                <input type="radio" id="text" name="text" value="Text">
                <label for="text">Text</label>
@@ -102,13 +102,14 @@
           <img src="images/phone-icon.png" alt="Call Us" width="20"> 
           <h3> Office:  250-914-8050 </h3>
         </figure>
-       </div>
+        </div>
+      </div>
      
        <!--Mail Address-->
       <div class="contact-email">
        <figure>
        <img src="images/mail-icon.png" alt="Email us" width="20" > 
-       <a href= "mailto: smandula@iogl.ca"> smandula@iogl.ca </a>
+       <a href= "mailto:smandula@iogl.ca"> smandula@iogl.ca</a>
      </figure>
     </div>
 

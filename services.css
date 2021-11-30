@@ -88,8 +88,7 @@ box-sizing: border-box;
 display: block;
 float: left;
 font-size: 2em;
-padding-left: 100px;
-padding: 10 40 10 10px;
+padding: 10px 40px 10px 10px;
 text-decoration: none;
 }
 
@@ -288,7 +287,7 @@ clear: both;
 }
 
 .footer-bottom p{
- float: left center;
+ text-align: center;
  font-size: 14px;
 }
 
@@ -315,7 +314,6 @@ display: block;
 color: #000000;
 text-decoration: none;
 font-family: 'Mada', sans-serif;
-font-weight: 100px;
 font-size: smaller;
 }
 
